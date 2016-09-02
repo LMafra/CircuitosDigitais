@@ -78,11 +78,11 @@ NOT e os conceitos de atraso em portas lógicas e nível de ruído em circuitos 
 \section{Introdução}
 \label{sec:Introducao}
 
-Os sistemas digitais que conhecemos tem como base o uso de operações lógicas que terão sempre apenas duas respostas possíveis: verdadeiro (representado também pelo valor 1) e falso (representado também pelo valor 0). Os circuitos digitais permitem que essas operações lógicas sejam implementadas, consequentemente permitindo que as máquinas realizem as operações que exigimos delas. 
-Nos circuitos, os valores ‘verdadeiro’ e ‘falso’ interpretados pelo sistema digital são gerados a partir de tensões. Na lógica positiva, temos que um nível alto de tensão é associado ao nível lógico 1, enquanto o nível baixo de tensão é associado ao nível lógico 0.
-Para este experimento, o circuitos integrados que foram utilizados pertencem à família TTL (Transistor-Transistor-Logic). Para estes circuitos temos uma alimentação de 5,0 Volts, onde o nível lógico 1 terá saída de 5,0 Volts(o maior valor) e o nível lógico 0 terá uma saída de 0 Volts. É claro que isso não é um valor exato. Para valores de entrada, temos que o circuito reconhece como 0 valores até 0,8 volts, e como 1 valores de 2,0 a 5,5 Volts. Isso é necessário pois experimentalmente precisamos de um intervalo de erros na hora de realizar leituras. Na saída, o circuito TTL representa o nível lógico 0 no intervalo de 0 a 0,4 Volts e o nível lógico 1 no intervalo de 2,4 a 5,0 Volts.
-Para realizar as operações lógicas com os níveis lógicos é necessária a utilização de portas lógicas. As operações lógicas básicas são as operações AND (A e B), OR (A ou B) e NOT (não A). Já nos circuitos, temos 2 pinos que destinam-se à alimentação do circuito e 12 que se destinam às portas, que geralmente tem 2 entradas e uma saída, gerando um total de 4 portas por circuito integrado. Combinando essas portas é possível gerar diversas operações lógicas com diferentes níveis de complexidade. As portas lógicas recebem informações em nível lógico e geram uma saída também em nível lógico. Portanto, precisamos apenas de dois valores qualquer que seja a operação a ser feita.
-Neste experimento, trabalharemos com estas portas lógicas, estudaremos as tabelas verdade geradas para cada combinação de valores em cada porta e mostraremos que apesar de eficiente, ao lidarmos com portas lógicas temos que considerar que cada uma delas possui um tempo para processar uma informação, provando que erros são presentes até nos sistemas mais simples.
+	Os sistemas digitais que conhecemos tem como base o uso de operações lógicas que terão sempre apenas duas respostas possíveis: verdadeiro (representado também pelo valor 1) e falso (representado também pelo valor 0). Os circuitos digitais permitem que essas operações lógicas sejam implementadas, consequentemente permitindo que as máquinas realizem as operações que exigimos delas.
+	Nos circuitos, os valores ‘verdadeiro’ e ‘falso’ interpretados pelo sistema digital são gerados a partir de tensões. Na lógica positiva, temos que um nível alto de tensão é associado ao nível lógico 1, enquanto o nível baixo de tensão é associado ao nível lógico 0.
+	Para este experimento, o circuitos integrados que foram utilizados pertencem à família TTL (Transistor-Transistor-Logic). Para estes circuitos temos uma alimentação de 5,0 Volts, onde o nível lógico 1 terá saída de 5,0 Volts(o maior valor) e o nível lógico 0 terá uma saída de 0 Volts. É claro que isso não é um valor exato. Para valores de entrada, temos que o circuito reconhece como 0 valores até 0,8 volts, e como 1 valores de 2,0 a 5,5 Volts. Isso é necessário pois experimentalmente precisamos de um intervalo de erros na hora de realizar leituras. Na saída, o circuito TTL representa o nível lógico 0 no intervalo de 0 a 0,4 Volts e o nível lógico 1 no intervalo de 2,4 a 5,0 Volts.
+	Para realizar as operações lógicas com os níveis lógicos é necessária a utilização de portas lógicas. As operações lógicas básicas são as operações AND (A e B), OR (A ou B) e NOT (não A). Já nos circuitos, temos 2 pinos que destinam-se à alimentação do circuito e 12 que se destinam às portas, que geralmente tem 2 entradas e uma saída, gerando um total de 4 portas por circuito integrado. Combinando essas portas é possível gerar diversas operações lógicas com diferentes níveis de complexidade. As portas lógicas recebem informações em nível lógico e geram uma saída também em nível lógico. Portanto, precisamos apenas de dois valores qualquer que seja a operação a ser feita.
+	Neste experimento, trabalharemos com estas portas lógicas, estudaremos as tabelas verdade geradas para cada combinação de valores em cada porta e mostraremos que apesar de eficiente, ao lidarmos com portas lógicas temos que considerar que cada uma delas possui um tempo para processar uma informação, provando que erros são presentes até nos sistemas mais simples.
 
 
 \section{Procedimentos}
@@ -143,7 +143,7 @@ Este experimento é dividido em quatro etapas.
 \label{fig:portaor}
 \end{figure}
 
-A Figura~\ref{fig:portaor} apresenta um exemplo de como usar e citar uma figura.
+//A Figura~\ref{fig:portaor} apresenta um exemplo de como usar e citar uma figura.
 
 \begin{table}
 	\centering
@@ -208,6 +208,8 @@ Sempre identifique no site do vídeo:
 
 \section{Conclusão}
 \label{sec:Conclusao}
+	Por este experimento obtivemos uma prática inicial com circuitos digitais, podemos nos familirializar com o protoboard e podemos por fim, compreender o atraso de propagação em portas  lógicas. 
+	Foi adquirido também um entendimento sobre as portas lógicas AND, NOT e OR, e que de fato, elas podem ser construídas de forma intercalada, determinando assim os conjuntos universais.
 
 
 \bibliographystyle{sbc}
