@@ -4,7 +4,6 @@
 % 2016-2
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\PassOptionsToPackage{brazil,american}{babel}
 \documentclass[12pt]{article}
 
 \usepackage{sbc-template}
@@ -23,8 +22,8 @@
      
 \sloppy
 
-\title{Experimento 7\\ 
-Circuitos Combinacionais: Multiplexadores}
+\title{Experimento 1\\ 
+Portas lógicas AND, OR e NOT}
 
 \author{Lucas Mafra Chagas, 12/0126443\\
         Marcelo Giordano Martins Costa de Oliveira,  12/0037301\\
@@ -41,11 +40,11 @@ Circuitos Combinacionais: Multiplexadores}
 \maketitle
 
  \begin{abstract}
-   Write here a short summary of the report in English. This corresponds to the Experiment 7 report on combinational circuits, specifically the multiplexers.
+   This essay has the intention to give the student the first contact with de digital panel and logic gates.
  \end{abstract}
      
  \begin{resumo} 
-  Escreva aqui um pequeno resumo do relatório. Este corresponde ao relatório do Experimento 7 sobre circuitos combinacionais, especificamente os multiplexadores.
+  O intuito deste experimento é dar o primeiro contato com o painel digital e a utilização de portas lógicas.
  \end{resumo}
 
 
@@ -79,12 +78,19 @@ NOT e os conceitos de atraso em portas lógicas e nível de ruído em circuitos 
 \section{Introdução}
 \label{sec:Introducao}
 
-Escreva com suas palavras o que vai ser trabalhado no experimento. Aqui temos um exemplo de como citar a bibliografia consultada \cite{boulic:91} \cite{smith:99}.
 
 \section{Procedimentos}
 \label{sec:Procedimentos}
 
-Escreva nesta seção os diversos itens pedidos no experimentos. 
+Este experimento é dividido em quatro etapas.
+
+\begin{itemize}
+	\item A primeira etapa tem o foco de testar o funcionamento das portas lógicas AND e OR. Para isso, o aluno precisa verificar se as entradas da placa condizem com a saída esperada, além de verificar o valor da tensão nas 4 saídas dos chips.
+	\item Na segunda etapa, o aluno precisa projetar e implementar uma porta OR usando apenas portas AND e NOT. Para realização desta etapa, o estudante precisa verificar se o desenho projetado realiza a função desejada no final.
+	\item Na terceira etapa, assim como na segunda, o aluno precisa projetar e implementar uma porta AND usando apenas portas OR e NOT. Como realizado na segunda etapa, o aluno precisa verificar se o desenho projetado realiza a função desejada no final.
+	\item Na quarta etapa, o intuito é verificar a existência dos atrasos de propagação em portas. Para isso, o aluno precisa fazer com que a haja uma saída da placa, onde, em série, uma vai direto para a porta AND e a outra é negada cinco vezes e enviada para a porta AND. É verificado se surgiu algum pulso com ajuda da ponta lógica. 
+\end{itemize}
+
 
 \subsection{Funcionamento das portas lógicas AND e OR}
 \label{sec:Porta Lógica}
@@ -120,13 +126,6 @@ Escreva nesta seção os diversos itens pedidos no experimentos.
 	\label{Porta OR}
 \end{table}
 
-Descrever o experimento realizado. Sempre  que colocar uma figura deve-se explicar o que se pretende que o leitor veja, ou uma análise logo após a figura. 
-
-
-Aqui temos um exemplo de como citar uma URL na bibliografia~\cite{systemverilog}.
-
-
-É apresentado acima como fazer uma listagem não numerada.
 
 \subsection{Implementação da porta OR com portas AND e NOT}
 \label{sec:NOTAND}
@@ -200,14 +199,9 @@ Sempre identifique no site do vídeo:
 \section{Análise dos Resultados}
 \label{sec:Resultados}
 
-Faça uma análise crítica dos resultados obtidos nos experimentos. Esta análise pode ser feita item a item ou de uma forma geral.
-
-Dica: Use pesquisa na Internet para tirar as dúvidas sobre edição em \LaTeX .
 
 \section{Conclusão}
 \label{sec:Conclusao}
-
-Concluir o relatório explanando rapidamente o que foi feito e os resultados obtidos, sempre correlacionando com os objetivos do experimento apresentado na Seção~\ref{sec:Objetivos}. 
 
 
 \bibliographystyle{sbc}
