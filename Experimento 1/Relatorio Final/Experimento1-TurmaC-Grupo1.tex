@@ -140,11 +140,9 @@ Este experimento é dividido em quatro etapas.
 \begin{figure}[H]
 \centering
 \includegraphics[width=.5\textwidth]{Porta_OR.jpeg}
-\caption{Uma figura}
+\caption{implementação com portas AND e NOT}
 \label{fig:portaor}
 \end{figure}
-
-//A Figura~\ref{fig:portaor} apresenta um exemplo de como usar e citar uma figura.
 
 \begin{table}[H]
 	\centering
@@ -191,7 +189,16 @@ A Figura~\ref{fig:portaand} apresenta um exemplo de como usar e citar uma figura
 \subsection{Atraso de Propagação em Portas}
 \label{sec:atraso}
 
-Infelizmente, ao realizarmos o experimento, um dos fios queimou e só precebemos isso depois de muito tempo e com o auxílio do professor. Por isso, acabamos não tirando foto ou gravando o vídeo necessário para a comprovação do experimento.
+Infelizmente, ao realizarmos o experimento, um dos fios queimou e só precebemos isso depois de muito tempo e com o auxílio do professor. Por isso, acabamos não tirando foto ou gravando o vídeo necessário para a comprovação do experimento. Segue o esquema para uma avaliação teórica:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.5\textwidth]{esquema25.jpg}
+	\caption{Esquema do experimento 2.5}
+	\label{fig:portaand}
+\end{figure}
+
+	Temos que o pulso de A irá chegar na porta and de duas maneiras: normal e negado. Com a ajuda com o dispositivo de ponta de prova, observamos a diferença de tempo de propagação existente para quando temos apenas uma porta e para quando temos diversas portas. O dispositivo com a ponta de prova é necessário pois, apesar de a diferença de tempo existir, ela é da escala de grandeza de nanossegundos, e consequentemente, não será vista a olho nu. O dispositivo prolonga esse pulso (gerado pelo erro temporário da saída) para que a análise possa ser feita.
 
 \section{Análise dos Resultados}
 \label{sec:Resultados}
@@ -202,7 +209,9 @@ Infelizmente, ao realizarmos o experimento, um dos fios queimou e só precebemos
 	\item Foi confirmada a lógica booleana em porta AND. 
 	\item Foi possível observar que as portas AND e NOT formam um conjunto universal, corretamente representando a tabela verdade do conectivo OR.
 	\item Foi possível observar que as portas OR e NOT formam um conjunto universal, corretamente representando a tabela verdade do conectivo AND.
-}
+	\item 	
+	Mesmo sem tirar a foto, analisamos teoricamente que como os valores de entrada que iriam chegar na porta AND eram sempre opostos, já que tínhamos A e NOT A (não A), o diodo nunca deveria se acender (o resultado sempre seria falso/0), provado pela tabela verdade obtida para a porta AND. Portanto, começando com a chave A fechada, o pulso se propagaria e o ponto B (onde A chega negado) apresentaria o valor da chave A aberta, permanecendo apagado o led. 
+	
 \end{enumerate}
 
 
