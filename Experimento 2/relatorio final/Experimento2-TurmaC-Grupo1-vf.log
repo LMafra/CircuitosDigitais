@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.8.20)  9 SEP 2016 19:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.8.20)  9 SEP 2016 20:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Experimento2-TurmaC-Grupo1.tex
-(./Experimento2-TurmaC-Grupo1.tex
+**Experimento2-TurmaC-Grupo1-vf.tex
+(./Experimento2-TurmaC-Grupo1-vf.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 5 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -902,26 +902,59 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip50
 )
-(./Experimento2-TurmaC-Grupo1.aux)
-\openout1 = `Experimento2-TurmaC-Grupo1.aux'.
+(./Experimento2-TurmaC-Grupo1-vf.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 38.
+LaTeX Warning: Label `fig:exemplo' multiply defined.
 
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+
+LaTeX Warning: Label `fig:exemplo' multiply defined.
+
+
+LaTeX Warning: Label `fig:exemplo' multiply defined.
+
+
+LaTeX Warning: Label `fig:exemplo' multiply defined.
+
+
+LaTeX Warning: Label `fig:exemplo' multiply defined.
+
+
+LaTeX Warning: Label `fig:exemplo' multiply defined.
+
+
+LaTeX Warning: Label `fig:exemplo' multiply defined.
+
+
+LaTeX Warning: Label `fig:exemplo' multiply defined.
+
+
+LaTeX Warning: Label `fig:exemplo' multiply defined.
+
+
+LaTeX Warning: Label `Porta NAND' multiply defined.
+
+
+LaTeX Warning: Label `Porta NAND' multiply defined.
+
+)
+\openout1 = `Experimento2-TurmaC-Grupo1-vf.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 33.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 *geometry* driver: auto-detecting
@@ -990,7 +1023,7 @@ e
 
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box43
-Package hyperref Info: Link coloring OFF on input line 38.
+Package hyperref Info: Link coloring OFF on input line 33.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1000,122 +1033,165 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count147
 )
-LaTeX Info: Redefining \ref on input line 38.
-LaTeX Info: Redefining \pageref on input line 38.
-LaTeX Info: Redefining \nameref on input line 38.
+LaTeX Info: Redefining \ref on input line 33.
+LaTeX Info: Redefining \pageref on input line 33.
+LaTeX Info: Redefining \nameref on input line 33.
 
-(./Experimento2-TurmaC-Grupo1.out) (./Experimento2-TurmaC-Grupo1.out)
+(./Experimento2-TurmaC-Grupo1-vf.out) (./Experimento2-TurmaC-Grupo1-vf.out)
 \@outlinefile=\write4
-\openout4 = `Experimento2-TurmaC-Grupo1.out'.
+\openout4 = `Experimento2-TurmaC-Grupo1-vf.out'.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <16> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 41.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 36.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 41.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 36.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 41.
+(Font)              <12> on input line 36.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 41.
+(Font)              <8> on input line 36.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 41.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 41.
+(Font)              <6> on input line 36.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 36.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-LaTeX Font Info:    Try loading font information for OMS+pcr on input line 41.
+LaTeX Font Info:    Try loading font information for OMS+pcr on input line 36.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omspcr.fd
 File: omspcr.fd 
 )
 LaTeX Font Info:    Font shape `OMS/pcr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 41.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 36.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 42.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 37.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <13> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 51.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 61.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 45.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 54.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 61.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 54.
 
-<nandnor.jpg, id=7, 797.98125pt x 405.515pt>
+<nandnor.jpg, id=59, 797.98125pt x 405.515pt>
 File: nandnor.jpg Graphic file (type jpg)
  <use nandnor.jpg>
-Package pdftex.def Info: nandnor.jpg used on input line 84.
+Package pdftex.def Info: nandnor.jpg used on input line 76.
 (pdftex.def)             Requested size: 213.39568pt x 108.4386pt.
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 85.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 77.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 85.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 77.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<xorxnor.jpg, id=24, 808.01875pt x 288.07625pt>
+<xorxnor.jpg, id=72, 808.01875pt x 288.07625pt>
 File: xorxnor.jpg Graphic file (type jpg)
  <use xorxnor.jpg>
-Package pdftex.def Info: xorxnor.jpg used on input line 93.
+Package pdftex.def Info: xorxnor.jpg used on input line 86.
 (pdftex.def)             Requested size: 213.39568pt x 76.0761pt.
- [2 <./nandnor.jpg> <./xorxnor.jpg>] <portanand.jpg, id=34, 547.04375pt x 308.1
+ [2 <./nandnor.jpg> <./xorxnor.jpg>] <portanand.jpg, id=81, 547.04375pt x 308.1
 5125pt>
 File: portanand.jpg Graphic file (type jpg)
 
 <use portanand.jpg>
-Package pdftex.def Info: portanand.jpg used on input line 131.
+Package pdftex.def Info: portanand.jpg used on input line 124.
 (pdftex.def)             Requested size: 213.39568pt x 120.20671pt.
- <portanor.jpg, id=35, 549.05125pt x 313.17pt>
+ <portanor.jpg, id=82, 549.05125pt x 313.17pt>
 File: portanor.jpg Graphic file (type jpg)
 
 <use portanor.jpg>
-Package pdftex.def Info: portanor.jpg used on input line 140.
+Package pdftex.def Info: portanor.jpg used on input line 133.
 (pdftex.def)             Requested size: 213.39568pt x 121.71529pt.
- <portanand3.jpg, id=36, 363.3575pt x 119.44624pt>
+ <portanand3.jpg, id=83, 363.3575pt x 119.44624pt>
 File: portanand3.jpg Graphic file (type jpg)
 
 <use portanand3.jpg>
-Package pdftex.def Info: portanand3.jpg used on input line 157.
+Package pdftex.def Info: portanand3.jpg used on input line 149.
 (pdftex.def)             Requested size: 213.39568pt x 70.15005pt.
  [3 <./portanand.jpg> <./portanor.jpg>]
-<circuitonand.jpg, id=48, 1411.2725pt x 2509.375pt>
+<circuitonand.jpg, id=94, 1411.2725pt x 2509.375pt>
 File: circuitonand.jpg Graphic file (type jpg)
  <use circuitonand.jpg>
-Package pdftex.def Info: circuitonand.jpg used on input line 167.
+Package pdftex.def Info: circuitonand.jpg used on input line 159.
 (pdftex.def)             Requested size: 213.39568pt x 379.41492pt.
 
-<xor4.jpg, id=49, 400.49625pt x 82.3075pt>
+<xor4.jpg, id=95, 400.49625pt x 82.3075pt>
 File: xor4.jpg Graphic file (type jpg)
  <use xor4.jpg>
-Package pdftex.def Info: xor4.jpg used on input line 176.
+Package pdftex.def Info: xor4.jpg used on input line 168.
 (pdftex.def)             Requested size: 213.39568pt x 43.85635pt.
- [4 <./portanand3.jpg> <./circuitonand.jpg>] <circuitoxor.jpg, id=58, 1411.2725
-pt x 2509.375pt>
+ [4 <./portanand3.jpg> <./circuitonand.jpg>] <circuitoxor.jpg, id=103, 1411.272
+5pt x 2509.375pt>
 File: circuitoxor.jpg Graphic file (type jpg)
 
 <use circuitoxor.jpg>
-Package pdftex.def Info: circuitoxor.jpg used on input line 185.
+Package pdftex.def Info: circuitoxor.jpg used on input line 177.
 (pdftex.def)             Requested size: 213.39568pt x 379.41492pt.
- <xor2.jpg, id=59, 392.21532pt x 236.38312pt>
+ <xor2.jpg, id=104, 392.21532pt x 236.38312pt>
 File: xor2.jpg Graphic file (type jpg)
 
 <use xor2.jpg>
-Package pdftex.def Info: xor2.jpg used on input line 194.
+Package pdftex.def Info: xor2.jpg used on input line 186.
 (pdftex.def)             Requested size: 213.39568pt x 128.61163pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [5 <./xor4.jpg> <./circuitoxor.jpg>] <circuitoxor2.jpg, id=67, 1411.2725pt x 2
-509.375pt>
+ [5 <./xor4.jpg> <./circuitoxor.jpg>]
+<circuitoxor2.jpg, id=112, 1411.2725pt x 2509.375pt>
 File: circuitoxor2.jpg Graphic file (type jpg)
-
-<use circuitoxor2.jpg>
-Package pdftex.def Info: circuitoxor2.jpg used on input line 203.
+ <use circuitoxor2.jpg>
+Package pdftex.def Info: circuitoxor2.jpg used on input line 195.
 (pdftex.def)             Requested size: 213.39568pt x 379.41492pt.
 
-! Missing \endgroup inserted.
-<i
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6 <./xor2.jpg> <./circuitoxor2.jpg>] [7]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8]
+[9] [10]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 345.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 345.
+ (./Experimento2-TurmaC-Grupo1-vf.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 345.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 345.
+Package rerunfilecheck Info: File `Experimento2-TurmaC-Grupo1-vf.out' has not c
+hanged.
+(rerunfilecheck)             Checksum: 295E6B5995762E0C9046704046F1DF3C;998.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 345.
+ ) 
+Here is how much of TeX's memory you used:
+ 18418 strings out of 494910
+ 336636 string characters out of 6179836
+ 411863 words of memory out of 5000000
+ 21321 multiletter control sequences out of 15000+600000
+ 21033 words of font info for 44 fonts, out of 8000000 for 9000
+ 36 hyphenation exceptions out of 8191
+ 62i,10n,56p,695b,401s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
+w/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uh
+vb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/font
+s/type1/urw/times/utmri8a.pfb>
+Output written on Experimento2-TurmaC-Grupo1-vf.pdf (10 pages, 1503603 bytes).
+PDF statistics:
+ 188 PDF objects out of 1000 (max. 8388607)
+ 152 compressed objects within 2 object streams
+ 41 named destinations out of 1000 (max. 500000)
+ 167 words of extra memory for PDF output out of 10000 (max. 10000000)
+
