@@ -20,11 +20,12 @@
 \usepackage{algorithmic}
 \usepackage{algorithm}
 \usepackage{hyperref}
+\usepackage{enumitem}
      
 \sloppy
 
-\title{Experimento 2\\ 
-	Portas Lógicas: NAND, NOR e XOR }
+\title{Experimento 4\\
+	Circuitos Combinacionais : Comparador de Palavras }
 
 \author{Isaac Lopes, 12/0120801\\
 	Lucas Mafra Chagas, 12/0126443 \\
@@ -53,44 +54,77 @@
 \section{Objetivos}
 \label{sec:Objetivos}
 
-Descrever aqui os objetivos do experimento.
+Os objetivos do presente relatório são de usar o sistema Quartus II para a implementação de circuitos com comparadores de palavras binárias com as técnicas utilizadas em relatórios passados de simplificação e montagem.
 
 \section{Materiais} 
 \label{sec:Materiais}
 
 \begin{itemize}
-    \item Painel Digital
-    
-    \item \textit{protoboard}
-    
-    \item Fios
-    
-    \item Portas Lógicas AND e NAND
-    
+    \item software Quartus-II v13.0
 \end{itemize}
-
-
 \section{Introdução}
 \label{sec:Introducao}
 
-Escreva com suas palavras o que vai ser trabalhado no experimento. Aqui temos um exemplo de como citar a bibliografia consultada \cite{boulic:91} \cite{smith:99}.
+Um comparador é um circuito combinatório operativo. Ele permite comparar grandezas de dois números binarios.Um comprimento de uma palavra binária é o número de bits que a compõem.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.5\textwidth]{cc1.png}	
+\end{figure}
+
+Um comparador tem como saída 1 se os comprimentos forem iguais,caso
+contrário a saída sera 0.
+Ele também pode possuir três saídas:
+
+\begin{itemize}
+	\item	se A=B
+	\item	se A\textless B
+	\item	se A\textgreater B
+\end{itemize}
+
+Para uma boa realização de um circuito combinacional é necessário seguir alguns
+passos,como os mostrados abaixo:
+
+\begin{enumerate}[label=(\alph*)]
+	\item	Descrever sistema;
+	\item 	Elaborar tabela da verdade;
+	\item	Obter funções booleanas a partir da tabela verdade;
+	\item	Simplificar funções booleanas obtidas ;
+	\item	Elaborar diagrama lógico.
+\end{enumerate}
+Dessa maneira ,fica mais intuitivo a realização da montagem e análise do circuito.
 
 \section{Procedimentos}
 \label{sec:Procedimentos}
-
-Escreva nesta seção os diversos itens pedidos no experimentos. 
+Parte 1:
+\begin{enumerate}[label=(\roman*)]
+	\item	Usando apenas portas NAND de DUAS entradas,projetar um
+	comparador de palavras de 3 bits, completar a tabela verdade
+	para Ai e Bi e obtenher a equação para Zi ;
+	\item	Minimizar a função obtida anteriormente;
+	\item	Fazer um diagrama lógico parcial. Implementar e verificar se o
+	resultado combina com o resultado da tabela verdade;
+	\item	Fazer um diagrama lógico total e implementar;
+	\item	Comentar os resultados obtidos.
+\end{enumerate}
+Parte 2:
+\begin{enumerate}[label=(\roman*)]
+	\item	Elaborar a  tabela verdade parcial e obter as funções booleanas parciais do  circuito Comparador de 1 bit;
+	\item	Fazer uma tabela verdade parcial e obter funções parciais;
+	\item	Minimizar a função obtida anteriormente;
+	\item	Fazer o diagrama lógico parcial. Implementar e verificar se o
+	resultado combina com o resultado da tabela verdade;
+	\item	Fazer o diagrama lógico total de acordo com a figura
+	abaixo e implementar;
+	\begin{figure}	
+	\end{figure}
+	\item	Comente os resultados obtidos.
+\end{enumerate}
 
 \subsection{Multiplexador de 4 entradas}
 \label{sec:Mux}
 
 Descrever o experimento realizado. Sempre  que colocar uma figura deve-se explicar o que se pretende que o leitor veja, ou uma análise logo após a figura. 
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=.5\textwidth]{fig1.jpg}
-\caption{Uma figura}
-\label{fig:exemplo}
-\end{figure}
 
 A Figura~\ref{fig:exemplo} apresenta um exemplo de como usar e citar uma figura.
 
@@ -145,23 +179,21 @@ Dica: Use pesquisa na Internet para tirar as dúvidas sobre edição em \LaTeX .
 
 \section{Conclusão}
 \label{sec:Conclusao}
-
-Concluir o relatório explanando rapidamente o que foi feito e os resultados obtidos, sempre correlacionando com os objetivos do experimento apresentado na Seção~\ref{sec:Objetivos}. 
-
-
-\bibliographystyle{sbc}
-\bibliography{relatorio}
-
-
+Foi estudado nesse relatório o uso de comparadores de bits, bem como o uso da
+ferramenta Quartus II para a implementação de circuitos. Foram usados métodos
+conhecidos da síntese de circuitos combinacionais já vistos em aulas teóricas.
+Pode-se afirmar que, com a semelhança dos resultados nas tabelas verdades com
+as tabelas do Quartus II que foi um experimento de bastante sucesso.
 \newpage 
 % Colocar aqui apenas as respostas dos itens da Auto-Avaliação
 \section*{Auto-Avaliação}
 
 \begin{enumerate}
-    \item a
-    \item c
     \item b
     \item d
+    \item d
+    \item b
+    \item b
 \end{enumerate}
 
 
