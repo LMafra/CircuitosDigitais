@@ -91,91 +91,135 @@ passos,como os mostrados abaixo:
 	\item	Simplificar funções booleanas obtidas ;
 	\item	Elaborar diagrama lógico.
 \end{enumerate}
-Dessa maneira ,fica mais intuitivo a realização da montagem e análise do circuito.
+Dessa maneira, fica mais intuitivo a realização da montagem e análise do circuito.
 
 \section{Procedimentos}
 \label{sec:Procedimentos}
-Parte 1:
+\subsection{Parte 1}
 \begin{enumerate}[label=(\roman*)]
-	\item	Usando apenas portas NAND de DUAS entradas,projetar um
-	comparador de palavras de 3 bits, completar a tabela verdade
-	para Ai e Bi e obtenher a equação para Zi ;
-	\item	Minimizar a função obtida anteriormente;
-	\item	Fazer um diagrama lógico parcial. Implementar e verificar se o
-	resultado combina com o resultado da tabela verdade;
-	\item	Fazer um diagrama lógico total e implementar;
-	\item	Comentar os resultados obtidos.
+	\item Complete a tabela da verdade abaixo do circuito XNOR e obtenha a sua função booleana Zi .
+	\item Modifique a função Zi obtida no item a de forma a usar apenas portas NAND de 2 entradas.
+	\item Desenhe, como um subcircuito, o diagrama lógico parcial da comparação do par de bits (Ai ,
+	Bi ), realize a simulação funcional e verifique a tabela da verdade do item a.
+	\item Desenhe o circuito total e faça a simulação funcional do diagrama lógico total, verificando a
+	tabela verdade obtida.
+	\item Realize a simulação temporal do circuito e comente os resultados obtidos justificando-os.
 \end{enumerate}
-Parte 2:
+\subsection{Parte 2}
 \begin{enumerate}[label=(\roman*)]
-	\item	Elaborar a  tabela verdade parcial e obter as funções booleanas parciais do  circuito Comparador de 1 bit;
-	\item	Fazer uma tabela verdade parcial e obter funções parciais;
-	\item	Minimizar a função obtida anteriormente;
-	\item	Fazer o diagrama lógico parcial. Implementar e verificar se o
-	resultado combina com o resultado da tabela verdade;
-	\item	Fazer o diagrama lógico total de acordo com a figura
-	abaixo e implementar;
-	\begin{figure}	
-	\end{figure}
-	\item	Comente os resultados obtidos.
+	\item Elabore a tabela da verdade parcial e obtenha as funções booleanas parciais do circuito
+	Comparador de 1 bit.
+	\item Minimize as expressões obtidas no item a.
+	\item Desenhe o subcircuito e faça a simulação funcional do diagrama lógico parcial do
+	Comparador de 1 bit, comparando com a tabela verdade do item a.
+	\item Desenhe o circuito e realize a simulação funcional do diagrama lógico total do Comparador
+	de 2 bits, escrevendo a tabela verdade obtida.
+	\item Realize a simulação temporal do circuito do Comparador de 2 bits e comente os resultados.
 \end{enumerate}
-
-\subsection{Multiplexador de 4 entradas}
-\label{sec:Mux}
-
-Descrever o experimento realizado. Sempre  que colocar uma figura deve-se explicar o que se pretende que o leitor veja, ou uma análise logo após a figura. 
-
-
-A Figura~\ref{fig:exemplo} apresenta um exemplo de como usar e citar uma figura.
-
-Aqui temos um exemplo de como citar uma URL na bibliografia~\cite{systemverilog}.
-Aqui temos um exemplo de como criar um hiperlink. Veja
-\href{https://www.youtube.com/watch?v=EcNxjxKRQ6E}{aqui} um exemplo de vídeo.
-
-Sempre identifique no site do vídeo:
-\begin{itemize}
-    \item o experimento: Experimento 7;
-    \item semestre: 2016-2;
-    \item a disciplina: CiC 116351 - Circuitos Digitais - Turma B;
-    \item a universidade: Universidade de Brasília (UnB);
-    \item os nomes dos componentes do grupo.
-\end{itemize}
-
-É apresentado acima como fazer uma listagem não numerada.
-
-\subsection{Demultiplexador}
-\label{sec:Demux}
-
-Este é outro item do experimento.
-Aqui temos um exemplo de como construir e citar uma tabela, conforme mostrado na Tabela~\ref{tab:resultados}.
-
-\begin{table}[H]
-    \centering
-    \caption{Expected values of the obtained circuits' attributes.}
-    \begin{tabular}{|c|c|c|c|c|c|c|c|}
-    \cline{2-7}
-    \multicolumn{1}{c}{} & \multicolumn{3}{|c|}{Phase 1} & \multicolumn{3}{c|}{Phase 2} & \multicolumn{1}{c}{} \\
-    \hline
-    Experiment & $n_g$ & $n_l$ & $n_t$ & $n_g$ & $n_l$ & $n_t$ & $t(s)$ \\
-    \hline
-    1 bit full adder & 8.16 & 3.8 & 47.6 & 5.03 & 3.0 & 25.93 & 99.13 \\
-    2 bit full adder & 18.06 & 5.16 & 107.13 & 11.06 & 4.9 & 60.06 & 709.56 \\
-    2 bit multiplier & 14.2 & 4.03 & 74.33 & 7.7 & 2.2 & 37.53 & 357.76 \\
-    7 segment decoder & 47.53 & 5.83 & 270.46 & 32.86 & 5.0 & 176.4 & 740.63 \\
-    Karnaugh 1 bit full adder & 19.0 & 6.0 & 102.0 & 5.03 & 3.0 & 24.8 & 130.73 \\
-    \hline
-    \end{tabular}
-    \label{tab:resultados}
-\end{table}
-
-Aqui devemos colocar uma apresentação e análise da tabela, explicando ao leitor o que se pretende mostrar.
 
 \section{Análise dos Resultados}
 \label{sec:Resultados}
+\subsection{Analise: Parte 1}
 
-Faça uma análise crítica dos resultados obtidos nos experimentos. Esta análise pode ser feita item a item ou de uma forma geral.
+A partir da tabela verdade~\ref{tab:XNOR} obtivemos a equação para montar o circuito comparador de 1 bit.
+\begin{table}[H]
+	\centering
+	\caption{Tabela XNOR(Comparador de 1 bit)}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\multicolumn{1}{|c}{A} & \multicolumn{1}{|c|}{B} & \multicolumn{1}{c|}{Zi}\\
+		\hline
+		0 & 0 & 1\\
+		0 & 1 & 0\\
+		1 & 0 & 0\\
+		1 & 1 & 1\\
+		\hline
+	\end{tabular}
+	\label{tab:XNOR}
+\end{table}
+Com a simplificação da tabela~\ref{tab:XNOR} obtivemos a seguinte equação: 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.5\textwidth]{simpxnor.png}
+	\label{fig:simpxnor}	
+\end{figure}
+O diagrama da função encontrada está representado na figura~\ref{fig:dlc1} abaixo:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.5\textwidth]{dlc1bit.png}
+	\caption{Diagrama Lógico do Comparador de 1 bit}
+	\label{fig:dlc1}	
+\end{figure}
+Já um comparador de 3 bits pode ser implementado pela figura~\ref{fig:cc3b}:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.5\textwidth]{cc3bitex.png}
+	\caption{Circuito Comparador de 3 bits.}
+	\label{fig:cc3b}
+\end{figure}
+Como no experimento é pedido apenas com portas NAND, o circuito,na figura~\ref{fig:dtc3} e sua wave form na figura~\ref{fig:wf3}, foi implementado da seguinte maneira:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.5\textwidth]{dtcc3bits.png}
+	\caption{Diagrama total do Circuito comparador de 3 bits}
+	\label{fig:dtc3}
+\end{figure}
 
-Dica: Use pesquisa na Internet para tirar as dúvidas sobre edição em \LaTeX .
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.5\textwidth]{wfcc3bits.png}
+	\caption{Forma de onda do circuito comparador de 3 bits}
+	\label{fig:wf3}
+\end{figure}
+
+\subsection{Analise: Parte 2}
+
+Preenchendo-se a tabela verdade parcial do comparador de 1 bit, tal que  Y1 = 1  \textless-\textgreater A\textgreater B, Y2 = 1 \textless-\textgreater  A=B e Y3 = 1 \textless-\textgreater A\textless B, obtivemos a equação necessária para montar o circuito comparador de igualdade, minoridade e maioridade de 1 bit.
+
+\begin{table}[H]
+	\centering
+	\caption{Comparador de 1 bit}
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		\multicolumn{1}{|c|}{A} & \multicolumn{1}{|c|}{B} & \multicolumn{1}{|c|}{Y1=\textgreater A\textgreater B} & \multicolumn{1}{|c|}{Y2=\textgreater A=B} & \multicolumn{1}{|c|}{Y3=\textgreater A\textless B} \\
+		\hline
+		0 & 0 & 0 & 1 & 0\\
+		0 & 1 & 0 & 0 & 1\\
+		1 & 0 & 1 & 0 & 0\\
+		1 & 1 & 0 & 1 & 0\\
+		\hline
+	\end{tabular}
+	\label{tab:c1b}
+\end{table}
+
+Sendo,
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.2\textwidth]{p2el.png}
+\end{figure}
+
+Através de Y1,Y2 e Y3, montamos o circuito comparador de 1 bit, como mostrado na figura~\ref{fig:cc1} abaixo:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.7\textwidth]{cc1bit2.png}
+	\caption{Circuito Comparador de 1 bit}
+	\label{fig:cc1}
+\end{figure}
+
+E, finalmente, utilizando o comparador de 1 bit, implementamos o circuito comparador de 2 bits representados pelas figuras~\ref{fig:cc2} e~\ref{fig:wf2}:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.7\textwidth]{cc2b.png}
+	\caption{Circuito Comparador de 2 bit}
+	\label{fig:cc2}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.7\textwidth]{wf2b.png}
+	\caption{Wave Form do Comparador de 2 bit}
+	\label{fig:wf2}
+\end{figure}
 
 \section{Conclusão}
 \label{sec:Conclusao}
