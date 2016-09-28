@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.8.20)  23 SEP 2016 21:18
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.1)  23 SEP 2016 21:19
+>>>>>>> 9aafdec3b4e85d61c0386b31c368b07dbec70b73
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1121,70 +1125,71 @@ File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 127.
+<<<<<<< HEAD
  [2]
 <simpxnor.png, id=85, 336.25626pt x 51.19125pt>
+=======
+
+<simpxnor.png, id=65, 336.25626pt x 51.19125pt>
+>>>>>>> 9aafdec3b4e85d61c0386b31c368b07dbec70b73
 File: simpxnor.png Graphic file (type png)
  <use simpxnor.png>
 Package pdftex.def Info: simpxnor.png used on input line 143.
 (pdftex.def)             Requested size: 213.39568pt x 32.48732pt.
+<<<<<<< HEAD
 
 <dlc1bit.png, id=87, 663.47874pt x 254.9525pt>
+=======
+ [2]
+<dlc1bit.png, id=88, 663.47874pt x 254.9525pt>
+>>>>>>> 9aafdec3b4e85d61c0386b31c368b07dbec70b73
 File: dlc1bit.png Graphic file (type png)
  <use dlc1bit.png>
 Package pdftex.def Info: dlc1bit.png used on input line 149.
 (pdftex.def)             Requested size: 213.39568pt x 81.99883pt.
 
-<cc3bitex.png, id=89, 328.22626pt x 213.79875pt>
+<cc3bitex.png, id=90, 328.22626pt x 213.79875pt>
 File: cc3bitex.png Graphic file (type png)
  <use cc3bitex.png>
 Package pdftex.def Info: cc3bitex.png used on input line 156.
 (pdftex.def)             Requested size: 213.39568pt x 139.00342pt.
 
-<dtcc3bits.png, id=92, 918.43124pt x 541.02126pt>
+<dtcc3bits.png, id=93, 918.43124pt x 541.02126pt>
 File: dtcc3bits.png Graphic file (type png)
  <use dtcc3bits.png>
 Package pdftex.def Info: dtcc3bits.png used on input line 163.
 (pdftex.def)             Requested size: 213.39568pt x 125.70358pt.
 
-Underfull \vbox (badness 1838) has occurred while \output is active []
-
- [3 <./simpxnor.png> <./dlc1bit.png> <./cc3bitex.png>]
-<wfcc3bits.png, id=105, 1144.275pt x 157.58875pt>
+<wfcc3bits.png, id=94, 1144.275pt x 157.58875pt>
 File: wfcc3bits.png Graphic file (type png)
  <use wfcc3bits.png>
 Package pdftex.def Info: wfcc3bits.png used on input line 170.
 (pdftex.def)             Requested size: 213.39568pt x 29.3867pt.
-
-<p2el.png, id=106, 109.40875pt x 73.27374pt>
+ [3 <./simpxnor.png> <./dlc1bit.png> <./cc3bitex.png> <./dtcc3bits.png>]
+<p2el.png, id=107, 109.40875pt x 73.27374pt>
 File: p2el.png Graphic file (type png)
  <use p2el.png>
 Package pdftex.def Info: p2el.png used on input line 198.
 (pdftex.def)             Requested size: 85.35696pt x 57.16669pt.
 
-<cc1bit2.png, id=108, 558.085pt x 444.66125pt>
+<cc1bit2.png, id=109, 558.085pt x 444.66125pt>
 File: cc1bit2.png Graphic file (type png)
  <use cc1bit2.png>
 Package pdftex.def Info: cc1bit2.png used on input line 204.
 (pdftex.def)             Requested size: 298.75264pt x 238.0373pt.
-
-Underfull \vbox (badness 2213) has occurred while \output is active []
-
- [4 <./dtcc3bits.png> <./wfcc3bits.png> <./p2el.png>]
-<cc2b.png, id=120, 832.10875pt x 663.47874pt>
+ [4 <./wfcc3bits.png> <./p2el.png> <./cc1bit2.png>]
+<cc2b.png, id=121, 832.10875pt x 663.47874pt>
 File: cc2b.png Graphic file (type png)
  <use cc2b.png>
 Package pdftex.def Info: cc2b.png used on input line 213.
 (pdftex.def)             Requested size: 298.75264pt x 238.20422pt.
 
-<wf2b.png, id=121, 951.555pt x 197.73875pt>
+<wf2b.png, id=122, 951.555pt x 197.73875pt>
 File: wf2b.png Graphic file (type png)
  <use wf2b.png>
 Package pdftex.def Info: wf2b.png used on input line 219.
 (pdftex.def)             Requested size: 298.75264pt x 62.08286pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [5 <./cc1bit2.png> <./cc2b.png>] [6 <./wf2b.png>] [7]
+ [5 <./cc2b.png> <./wf2b.png>] [6]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 244.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 244.
  (./Experimento4-TurmaC-Grupo1.aux)
@@ -1196,6 +1201,7 @@ ged.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 244.
  ) 
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
  19119 strings out of 494910
  346767 string characters out of 6179836
  423227 words of memory out of 5000000
@@ -1213,9 +1219,29 @@ etic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb
 exlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/urw/times/utmri8a.pfb>
 Output written on Experimento4-TurmaC-Grupo1.pdf (7 pages, 411083 bytes).
+=======
+ 19177 strings out of 493013
+ 349353 string characters out of 6133329
+ 431171 words of memory out of 5000000
+ 22297 multiletter control sequences out of 15000+600000
+ 21033 words of font info for 44 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 62i,10n,56p,460b,459s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/te
+xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texli
+ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
+e/2016/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2016/t
+exmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2016/texmf-di
+st/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
+ype1/urw/times/utmbi8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/
+times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr
+i8a.pfb>
+Output written on Experimento4-TurmaC-Grupo1.pdf (6 pages, 410359 bytes).
+>>>>>>> 9aafdec3b4e85d61c0386b31c368b07dbec70b73
 PDF statistics:
- 190 PDF objects out of 1000 (max. 8388607)
- 150 compressed objects within 2 object streams
- 47 named destinations out of 1000 (max. 500000)
+ 184 PDF objects out of 1000 (max. 8388607)
+ 145 compressed objects within 2 object streams
+ 46 named destinations out of 1000 (max. 500000)
  143 words of extra memory for PDF output out of 10000 (max. 10000000)
 
