@@ -159,8 +159,70 @@ $ Z = \overline{B}C + B\overline{C} + \overline{A}\overline{B}D$
 \subsection{Diagrama lógico total usando o número mínimo de portas lógicas}
 \label{sec:minimoporta}
 
+A partir das fórmulas obtidas pelo mapa de Karnaugh, obtivemos o seguinte diagrama lógico no software Quartus II:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{minimo.png}
+	\caption{Diagrama no Quartus II.}
+	\label{fig:diagrama1}
+\end{figure}
+
+
+Depois de estruturar o diagrama lógico, realizamos a: 
+
+Simulação Funcional:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{funcional1.png}
+	\caption{Simulação Funcional de Portas Mínimas.}
+	\label{fig:funcional1}
+\end{figure}
+E a Simulação Temporal:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{temporal1.png}
+	\caption{Simulação Temporal de Portas Mínimas.}
+	\label{fig:temporal1}
+\end{figure}
+
+
 \subsection{Diagrama lógico total usando somente portas NAND de 2 e 4 entradas}
 \label{sec:nandporta}
+
+A partir da simplificação das fórmulas obtidas pelo mapa de Karnaugh, obtivemos o seguinte diagrama lógico no software Quartus II:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{nand.png}
+	\caption{Diagrama no Quartus II.}
+	\label{fig:diagrama2}
+\end{figure}
+
+
+Depois de estruturar o diagrama lógico, realizamos a: 
+
+Simulação Funcional:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{funcional2.png}
+	\caption{Simulação Funcional com Portas Nands.}
+	\label{fig:funcional2}
+\end{figure}
+E a Simulação Temporal:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{temporal2.png}
+	\caption{Simulação Temporal com Portas Nands.}
+	\label{fig:temporal2}
+\end{figure}
+
+
+
 
 \subsection{Conversor de códigos projetado com o número mínimo de portas lógicas}
 \label{sec:conversor}
