@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.8.20)  30 SEP 2016 21:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.8.20)  30 SEP 2016 22:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1160,20 +1160,20 @@ Package pdftex.def Info: temporal1.png used on input line 186.
  <nand.png, id=98, 1371.1225pt x 770.88pt>
 File: nand.png Graphic file (type png)
  <use nand.png>
-Package pdftex.def Info: nand.png used on input line 204.
+Package pdftex.def Info: nand.png used on input line 199.
 (pdftex.def)             Requested size: 426.79135pt x 239.94662pt.
 
 [6 <./funcional1.png> <./temporal1.png>]
 <funcional2.png, id=105, 1371.1225pt x 770.88pt>
 File: funcional2.png Graphic file (type png)
  <use funcional2.png>
-Package pdftex.def Info: funcional2.png used on input line 216.
+Package pdftex.def Info: funcional2.png used on input line 211.
 (pdftex.def)             Requested size: 426.79135pt x 239.94662pt.
 
 <temporal2.png, id=106, 1371.1225pt x 770.88pt>
 File: temporal2.png Graphic file (type png)
  <use temporal2.png>
-Package pdftex.def Info: temporal2.png used on input line 224.
+Package pdftex.def Info: temporal2.png used on input line 219.
 (pdftex.def)             Requested size: 426.79135pt x 239.94662pt.
 
 Underfull \vbox (badness 3471) has occurred while \output is active []
@@ -1181,15 +1181,15 @@ Underfull \vbox (badness 3471) has occurred while \output is active []
  [7 <./nand.png> <./funcional2.png>]
 No file Experimento5-TurmaC-Grupo1.bbl.
 [8 <./temporal2.png>] [9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 267.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 267.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 264.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 264.
  (./Experimento5-TurmaC-Grupo1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 267.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 267.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 264.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 264.
 Package rerunfilecheck Info: File `Experimento5-TurmaC-Grupo1.out' has not chan
 ged.
 (rerunfilecheck)             Checksum: C25A29BBD2A7B649F04EEEFC89E2F416;768.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 267.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 264.
  ) 
 Here is how much of TeX's memory you used:
  18823 strings out of 494910
@@ -1198,7 +1198,7 @@ Here is how much of TeX's memory you used:
  21711 multiletter control sequences out of 15000+600000
  22618 words of font info for 46 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 62i,10n,56p,539b,326s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,10n,56p,552b,326s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/
@@ -1209,7 +1209,7 @@ vb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/font
 s/type1/urw/times/utmri8a.pfb>
-Output written on Experimento5-TurmaC-Grupo1.pdf (9 pages, 518974 bytes).
+Output written on Experimento5-TurmaC-Grupo1.pdf (9 pages, 519469 bytes).
 PDF statistics:
  178 PDF objects out of 1000 (max. 8388607)
  139 compressed objects within 2 object streams
