@@ -77,7 +77,7 @@ Os computadores são máquinas que trabalham com a utilização de um sistema bi
 	\centering
 	\includegraphics[width=.5\textwidth]{coddecod.jpg}
 	\caption{Codificador e Decodificador.}
-	\label{fig:exemplo}
+	\label{fig:coddecod}
 \end{figure}
 
 
@@ -120,17 +120,77 @@ Para este experimento, será criado um codificafor decimal-Código de Gray e um 
 \section{Procedimentos}
 \label{sec:Procedimentos}
 
-Escreva nesta seção os diversos itens pedidos no experimentos. 
+Neste relatório, precisamos fazer:
+\begin{itemize}
+	\item Obter as funções booleanas para o codificador.
+	\item Fazer simulações funcional e temporal do diagrama lógico do codificador no Quartus. 
+	\item Obter as funções booleanas para o decodificador.
+	\item Fazer simulações funcional e temporal do diagrama lógico do decodificador no Quartus. 
+	\item Filmar o funcionamento do codificador e decodificador feito no Quartus II.
+\end{itemize}
 
 \subsection{Funções Booleanas para o Codificador}
 \label{sec:Cod}
 
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{coder.png}
+	\caption{Codificador.}
+	\label{fig:coder}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{functionalcoder.png}
+	\caption{Simulação funcional do codificador.}
+	\label{fig:funccoder}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{timingcoder.png}
+	\caption{Simulação temporal do codificador.}
+	\label{fig:timecoder}
+\end{figure}
+
+
 \subsection{Funções Booleanas para o Decodificador}
 \label{sec:Decod}
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{decoder.png}
+	\caption{Decodificador.}
+	\label{fig:decoder}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{functionaldecoder.png}
+	\caption{Simulação funcional do decodificador.}
+	\label{fig:funcdecoder}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{timingdecoder.png}
+	\caption{Simulação temporal do decodificador.}
+	\label{fig:timedecoder}
+\end{figure}
+
 \subsection{Funcionamento do Codificador e Decodificador}
 
+Desenvolvemos no kit de desenvolvimento em FPGA DE2 Altera o código projetado com o codificador e decodificador projetado na imagem abaixo. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{coderdecoder.png}
+	\caption{Circuito contendo codificador e decodificador.}
+	\label{fig:coderdecoder}
+\end{figure}
+
+É possível ver o resultado no seguinte link: \href{https://www.youtube.com/watch?v=paRaiHqDqBo}{Vídeo no Youtube}
 
 
 \section{Análise dos Resultados}

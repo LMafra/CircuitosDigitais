@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.8.20)  7 OCT 2016 13:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.8.20)  7 OCT 2016 15:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1106,8 +1106,63 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./coddecod.jpg (PNG copy)>
 ]
+<coder.png, id=58, 1371.1225pt x 770.88pt>
+File: coder.png Graphic file (type png)
+ <use coder.png>
+Package pdftex.def Info: coder.png used on input line 138.
+(pdftex.def)             Requested size: 426.79135pt x 239.94662pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2]
+<functionalcoder.png, id=63, 1371.1225pt x 770.88pt>
+File: functionalcoder.png Graphic file (type png)
+ <use functionalcoder.png>
+Package pdftex.def Info: functionalcoder.png used on input line 145.
+(pdftex.def)             Requested size: 426.79135pt x 239.94662pt.
+
+<timingcoder.png, id=64, 1371.1225pt x 770.88pt>
+File: timingcoder.png Graphic file (type png)
+ <use timingcoder.png>
+Package pdftex.def Info: timingcoder.png used on input line 152.
+(pdftex.def)             Requested size: 426.79135pt x 239.94662pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3 <./coder.png> <./functionalcoder.png>] <decoder.png, id=71, 1371.1225pt x 7
+70.88pt>
+File: decoder.png Graphic file (type png)
+
+<use decoder.png>
+Package pdftex.def Info: decoder.png used on input line 163.
+(pdftex.def)             Requested size: 426.79135pt x 239.94662pt.
+ <functionaldecoder.png, id=72, 1371.1225pt x 770.88pt>
+File: functionaldecoder.png Graphic file (type png)
+
+<use functionaldecoder.png>
+Package pdftex.def Info: functionaldecoder.png used on input line 170.
+(pdftex.def)             Requested size: 426.79135pt x 239.94662pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4 <./timingcoder.png> <./decoder.png>]
+<timingdecoder.png, id=79, 1371.1225pt x 770.88pt>
+File: timingdecoder.png Graphic file (type png)
+ <use timingdecoder.png>
+Package pdftex.def Info: timingdecoder.png used on input line 177.
+(pdftex.def)             Requested size: 426.79135pt x 239.94662pt.
+
+<coderdecoder.png, id=80, 1371.1225pt x 770.88pt>
+File: coderdecoder.png Graphic file (type png)
+ <use coderdecoder.png>
+Package pdftex.def Info: coderdecoder.png used on input line 188.
+(pdftex.def)             Requested size: 426.79135pt x 239.94662pt.
+
+Underfull \vbox (badness 2644) has occurred while \output is active []
+
+ [5 <./functionaldecoder.png> <./timingdecoder.png>]
 No file Experimento6-TurmaC-Grupo1.bbl.
-[2]
+[6 <./coderdecoder.png>]
 
 ! Package inputenc Error: Unicode char ́ (U+301)
 (inputenc)                not set up for use with LaTeX.
@@ -1116,7 +1171,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.163 ...m Porta NOT A defeituosa, sempre com ní
+l.223 ...m Porta NOT A defeituosa, sempre com ní
                                                   vel 0 na saída.
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1130,7 +1185,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.163 ...defeituosa, sempre com nível 0 na saí
+l.223 ...defeituosa, sempre com nível 0 na saí
                                                   da.
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1144,7 +1199,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.164 ...m Porta NOT D defeituosa, sempre com ní
+l.224 ...m Porta NOT D defeituosa, sempre com ní
                                                   vel 1 na saída.
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1158,7 +1213,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.164 ...defeituosa, sempre com nível 1 na saí
+l.224 ...defeituosa, sempre com nível 1 na saí
                                                   da.
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1172,7 +1227,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.165 ...m Porta NOT A defeituosa, sempre com ní
+l.225 ...m Porta NOT A defeituosa, sempre com ní
                                                   vel 1 na saída.
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1186,31 +1241,35 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.165 ...defeituosa, sempre com nível 1 na saí
+l.225 ...defeituosa, sempre com nível 1 na saí
                                                   da.
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[3]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 169.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 169.
+[7]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 229.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 229.
  (./Experimento6-TurmaC-Grupo1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 169.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 169.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 229.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 229.
 Package rerunfilecheck Info: File `Experimento6-TurmaC-Grupo1.out' has not chan
 ged.
 (rerunfilecheck)             Checksum: 96A4ADEB1A08121678451DF622E3BF21;571.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 169.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 229.
  ) 
 Here is how much of TeX's memory you used:
- 18744 strings out of 494910
- 340806 string characters out of 6179836
- 416458 words of memory out of 5000000
- 21657 multiletter control sequences out of 15000+600000
+ 18799 strings out of 494910
+ 341678 string characters out of 6179836
+ 415725 words of memory out of 5000000
+ 21693 multiletter control sequences out of 15000+600000
  22618 words of font info for 46 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 62i,10n,56p,768b,326s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,10n,56p,768b,328s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/f
@@ -1219,10 +1278,10 @@ w/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb
 8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Experimento6-TurmaC-Grupo1.pdf (3 pages, 97409 bytes).
+Output written on Experimento6-TurmaC-Grupo1.pdf (7 pages, 546717 bytes).
 PDF statistics:
- 108 PDF objects out of 1000 (max. 8388607)
- 93 compressed objects within 1 object stream
- 22 named destinations out of 1000 (max. 500000)
- 90 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 144 PDF objects out of 1000 (max. 8388607)
+ 117 compressed objects within 2 object streams
+ 33 named destinations out of 1000 (max. 500000)
+ 125 words of extra memory for PDF output out of 10000 (max. 10000000)
 
