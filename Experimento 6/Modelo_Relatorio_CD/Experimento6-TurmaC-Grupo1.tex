@@ -171,6 +171,23 @@ A partir do diagrama lógico total, realizamos a simulação funcional e tempora
 \subsection{Funções Booleanas para o Decodificador}
 \label{sec:Decod}
 
+É possível obter as seguintes funções booleanas para o codificador utilizando o mapa de Karnaugh:
+
+\begin{center}
+	$0 = \overline{B}.\overline{C}.\overline{D}$\\
+	$1 = \overline{B}.\overline{C}.D$\\
+	$2 = \overline{B}.C.D$\\
+	$3 = \overline{B}.C.\overline{D}$\\
+	$4 = B.C.\overline{D}$\\
+	$5 = B.C.D$\\
+	$6 = \overline{A}.B.\overline{C}.D$\\
+	$7 = \overline{A}.B.\overline{C}.\overline{D}$\\
+	$8 = A.\overline{C}.\overline{D}$\\
+	$9 = \overline{A}.D$\\
+\end{center}
+
+
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{decoder.png}
@@ -192,13 +209,13 @@ A partir do diagrama lógico total, realizamos a simulação funcional e tempora
 	\label{fig:timedecoder}
 \end{figure}
 
-A tabela verdade abaixo 
+A tabela verdade abaixo foi obtida a partir das funções booleanas para o decodificador.
 
 \begin{table}[H]
 	\centering
 	\begin{tabular}{|c|c|c|c|c|}
 		\cline{1-5}
-		\multicolumn{1}{|c|}{Decimal} & \multicolumn{1}{|c|}{A} & \multicolumn{1}{|c|}{B} & \multicolumn{1}{|c|}{C} & \multicolumn{1}{|c|}{D}\\
+		\multicolumn{1}{|c|}{Entrada} & \multicolumn{1}{|c|}{A} & \multicolumn{1}{|c|}{B} & \multicolumn{1}{|c|}{C} & \multicolumn{1}{|c|}{D}\\
 		\hline
 		S0 & 0 & 0 & 0 & 0 \\
 		\hline
