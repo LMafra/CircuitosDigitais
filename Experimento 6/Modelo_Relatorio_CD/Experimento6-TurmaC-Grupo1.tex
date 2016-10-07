@@ -132,13 +132,26 @@ Neste relatório, precisamos fazer:
 \subsection{Funções Booleanas para o Codificador}
 \label{sec:Cod}
 
+É possível obter as seguintes funções booleanas para o codificador utilizando o mapa de Karnaugh:
+
+$A = (8+9) = \overline{\overline{8}.\overline{9}}$
+
+$B = (4 + 5 + 6 + 7 + 8 + 9) = \overline{\overline{4}.\overline{5}.\overline{6}.\overline{7}.\overline{8}.\overline{9}} $
+
+$C = (2 + 3 + 4 + 5) = \overline{\overline{2}.\overline{3}.\overline{4}.\overline{5}}$
+
+$D = (1 + 2 + 5 + 6 + 9) = \overline{\overline{1}.\overline{2}.\overline{5}.\overline{6}.\overline{9}}$
+
+Com as fórmulas supracitadas, é possível fazer o diagrama lógico total abaixo.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{coder.png}
-	\caption{Codificador.}
+	\caption{Diagrama Lógico do codificador.}
 	\label{fig:coder}
 \end{figure}
+
+A partir do diagrama lógico total, realizamos a simulação funcional e temporal e obtivemos os seguintes gráficos.
 
 \begin{figure}[H]
 	\centering
@@ -161,7 +174,7 @@ Neste relatório, precisamos fazer:
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{decoder.png}
-	\caption{Decodificador.}
+	\caption{Diagrama Lógico do decodificador.}
 	\label{fig:decoder}
 \end{figure}
 
@@ -178,6 +191,41 @@ Neste relatório, precisamos fazer:
 	\caption{Simulação temporal do decodificador.}
 	\label{fig:timedecoder}
 \end{figure}
+
+A tabela verdade abaixo 
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|}
+		\cline{1-5}
+		\multicolumn{1}{|c|}{Decimal} & \multicolumn{1}{|c|}{A} & \multicolumn{1}{|c|}{B} & \multicolumn{1}{|c|}{C} & \multicolumn{1}{|c|}{D}\\
+		\hline
+		S0 & 0 & 0 & 0 & 0 \\
+		\hline
+		S1 & 0 & 0 & 0 & 1 \\
+		\hline
+		S2 & 0 & 0 & 1 & 1 \\
+		\hline
+		S3 & 0 & 0 & 1 & 0 \\
+		\hline
+		S4 & 0 & 1 & 1 & 0 \\
+		\hline
+		S5 & 0 & 1 & 1 & 1 \\
+		\hline
+		S6 & 0 & 1 & 0 & 1 \\
+		\hline
+		S7 & 0 & 1 & 0 & 0 \\
+		\hline
+		S8 & 1 & 1 & 0 & 0 \\
+		\hline
+		S9 & 1 & 1 & 0 & 1 \\
+		\hline
+	\end{tabular}
+	
+\end{table} 
+
+
+
 
 \subsection{Funcionamento do Codificador e Decodificador}
 
