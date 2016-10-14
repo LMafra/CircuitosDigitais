@@ -8,7 +8,7 @@
 \usepackage{graphicx}
 \usepackage{url}
 \usepackage{float}
-\usepackage{listings}
+\usepackage{listings}	
 \usepackage{color}
 \usepackage{todonotes}
 \usepackage{algorithmic}
@@ -92,7 +92,7 @@ Sob o ponto de vista da implementação de seus circuitos, os multiplexadores e 
 \section{Procedimentos}
 \label{sec:Procedimentos}
 
-\subsection{Usar um MUX - 4 duplo em MSI para implementar um somador completo.}
+\subsection{Usar um MUX - 4 duplo em MSI para implementar um somador completo}
 \label{sec:Mux}
 
 Para um somador completo, temos que considerar as entradas A,B e C, com A e B sendo os bits na qual se quer somar e C sendo o carry vindo da soma anterior. Como saídas temos que considerar T e S, com S sendo o valor da soma dos 3 bits de entrada e T sendo o carry gerado por essa soma.	Temos portanto, que a tabela verdade para esse circuito seria:
@@ -134,6 +134,35 @@ Já para o caso da saída S temos a seguinte análise:
 
 Quando AB = 00 e AB = 11 temos que a saída S é a mesma que o valor da variável S. Portanto, ao selecionar as entradas de dados $Z_{0}$ e $Z_{3}$ precisamos que elas apresentem o valor de C, explicando a conexão feita. Quando AB = 01 e AB = 10, ocorre o oposto: a saída C possui o valor de NOT C. Portanto, temos que as entradas $Z_{1}$ e $Z_{2}$ precisam conter esse valor. 
 Feito o esquema apresentado, o circuito foi montado e implementado com a ajuda dos materiais apresentados acima:
+
+\subsection{Implementar uma função de 7 variáveis usando um multiplexador com 8 entradas de dados (MUX-8) construído com 2 multiplexadores com 4 entradas de dados (MUX-4 duplo)}
+
+A função que foi implementada nesta parte do experimento é a seguinte:
+
+$f(A,B,C,D,E,F,G) = FG + ABCD\overline{EF}G + \overline{ABCDEF}G + A\overline{B}CDEF\overline{G} + \overline{A}BCD\overline{E}F\overline{G} + ABCDE\overline{FG} + A\overline{BC}DE\overline{FG}$
+
+Para implementar essa função com um decodificador e um multiplexador de 4 entradas de dados duplo, foi preciso usar o decodificador para gerar minitermos que serviriam como entrada de dados para o multiplexador. Como o decodificador possuía 4 entradas, as quatro variáveis mais significativas da função foram escolhidas para gerar os minitermos. Observando a função principal, temos que os minitermos gerados pelas quatro primeiras variáveis são:
+
+$m_{0}=\overline{ABCD}$
+
+$m_{7}=\overline{A}BCD$
+
+$m_{9}=A\overline{BC}D$
+
+$m_{11}=A\overline{B}CD$
+
+$m_{15}=ABCD$
+
+Portanto, temos que no esquema, o decodificador será da seguinte forma: 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.5\textwidth]{ed.png}
+	\caption{Esquema do decodificador a ser implementado. Os fios em vermelhos são aqueles que apresentam os minitermos formados pelas variáveis mais significativas  que são válidos na função}
+	\label{fig:edd}
+\end{figure}
+
+Antes de definir o que fazer com as saídas do decodificador é necessário primeiramente analisar as variáveis restantes. Fazendo esta análise na forma de tabela verdade, temos:
 
 
 \section{Análise dos Resultados}

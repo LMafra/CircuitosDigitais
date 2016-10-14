@@ -4,6 +4,7 @@
 \BOOKMARK [2][-]{subsection.3.1}{Multiplexadores e Demultiplexadores}{section.3}% 4
 \BOOKMARK [2][-]{subsection.3.2}{Aplica\347\365es}{section.3}% 5
 \BOOKMARK [1][-]{section.4}{Procedimentos}{}% 6
-\BOOKMARK [2][-]{subsection.4.1}{Usar um MUX - 4 duplo em MSI para implementar um somador completo.}{section.4}% 7
-\BOOKMARK [1][-]{section.5}{An\341lise dos Resultados}{}% 8
-\BOOKMARK [1][-]{section.6}{Conclus\343o}{}% 9
+\BOOKMARK [2][-]{subsection.4.1}{Usar um MUX - 4 duplo em MSI para implementar um somador completo}{section.4}% 7
+\BOOKMARK [2][-]{subsection.4.2}{Implementar uma funcao de 7 variaveis usando um multiplexador com 8 entradas de dados \(MUX-8\) construido com 2 multiplexadores com 4 entradas de dados \(MUX-4 duplo\)}{section.4}% 8
+\BOOKMARK [1][-]{section.5}{An\341lise dos Resultados}{}% 9
+\BOOKMARK [1][-]{section.6}{Conclus\343o}{}% 10

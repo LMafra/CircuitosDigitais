@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.1)  14 OCT 2016 16:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.1)  14 OCT 2016 17:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1084,7 +1084,7 @@ File: omsptm.fd
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 53.
 
-<estrmux.png, id=43, 286.06876pt x 216.81pt>
+<estrmux.png, id=47, 286.06876pt x 216.81pt>
 File: estrmux.png Graphic file (type png)
  <use estrmux.png>
 Package pdftex.def Info: estrmux.png used on input line 75.
@@ -1102,54 +1102,120 @@ Underfull \vbox (badness 2103) has occurred while \output is active []
  [1
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<muxedemux.png, id=57, 451.6875pt x 470.75874pt>
+<muxedemux.png, id=61, 451.6875pt x 470.75874pt>
 File: muxedemux.png Graphic file (type png)
  <use muxedemux.png>
 Package pdftex.def Info: muxedemux.png used on input line 84.
 (pdftex.def)             Requested size: 213.39568pt x 222.40594pt.
- [2 <./estrmux.png> <./muxedemux.png>] <tvsc.png, id=67, 367.3725pt x 214.8025p
+ [2 <./estrmux.png> <./muxedemux.png>] <tvsc.png, id=71, 367.3725pt x 214.8025p
 t>
 File: tvsc.png Graphic file (type png)
 
 <use tvsc.png>
 Package pdftex.def Info: tvsc.png used on input line 102.
 (pdftex.def)             Requested size: 213.39568pt x 124.77563pt.
- <sc3e2s.png, id=68, 947.54pt x 701.62125pt>
+ <sc3e2s.png, id=72, 947.54pt x 701.62125pt>
 File: sc3e2s.png Graphic file (type png)
  <use sc3e2s.png>
 Package pdftex.def Info: sc3e2s.png used on input line 111.
 (pdftex.def)             Requested size: 213.39568pt x 158.00784pt.
 
-<esparat.png, id=69, 371.3875pt x 218.8175pt>
+<esparat.png, id=73, 371.3875pt x 218.8175pt>
 File: esparat.png Graphic file (type png)
  <use esparat.png>
 Package pdftex.def Info: esparat.png used on input line 120.
 (pdftex.def)             Requested size: 213.39568pt x 125.73227pt.
- [3 <./tvsc.png> <./sc3e2s.png>] <eds.png, id=78, 359.3425pt x 215.80624pt>
+ [3 <./tvsc.png> <./sc3e2s.png>] <eds.png, id=82, 359.3425pt x 215.80624pt>
 File: eds.png Graphic file (type png)
  <use eds.png>
 Package pdftex.def Info: eds.png used on input line 130.
 (pdftex.def)             Requested size: 213.39568pt x 128.16098pt.
 
-[4 <./esparat.png> <./eds.png>] [5] [6]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 188.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 188.
+
+! Package inputenc Error: Unicode char ̧ (U+327)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.138 ...es com 4 entradas de dados (MUX-4 duplo)}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char ̃ (U+303)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.138 ...es com 4 entradas de dados (MUX-4 duplo)}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char ́ (U+301)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.138 ...es com 4 entradas de dados (MUX-4 duplo)}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char ́ (U+301)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.138 ...es com 4 entradas de dados (MUX-4 duplo)}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[4 <./esparat.png> <./eds.png>] <ed.png, id=93, 717.68124pt x 538.01pt>
+File: ed.png Graphic file (type png)
+
+<use ed.png>
+Package pdftex.def Info: ed.png used on input line 160.
+(pdftex.def)             Requested size: 213.39568pt x 159.9676pt.
+ [5 <./ed.png>] [6] [7]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 217.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 217.
  (./Experimento7-TurmaC-Grupo1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 188.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 188.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 217.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 217.
 Package rerunfilecheck Info: File `Experimento7-TurmaC-Grupo1.out' has not chan
 ged.
-(rerunfilecheck)             Checksum: 97ADD0F057AFE0CF724C4E8B780A7921;558.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 188.
+(rerunfilecheck)             Checksum: C21F8DC68D9CEB74C48A391F6192392A;775.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 217.
  ) 
 Here is how much of TeX's memory you used:
- 18845 strings out of 493013
- 343863 string characters out of 6133329
- 421798 words of memory out of 5000000
- 21987 multiletter control sequences out of 15000+600000
+ 18858 strings out of 493013
+ 343980 string characters out of 6133329
+ 422003 words of memory out of 5000000
+ 21996 multiletter control sequences out of 15000+600000
  22618 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,10n,56p,812b,326s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,10n,56p,1689b,326s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/te
 xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texl
@@ -1162,10 +1228,10 @@ onts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1
 /urw/times/utmbi8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/time
 s/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.
 pfb>
-Output written on Experimento7-TurmaC-Grupo1.pdf (6 pages, 186137 bytes).
+Output written on Experimento7-TurmaC-Grupo1.pdf (7 pages, 192333 bytes).
 PDF statistics:
- 156 PDF objects out of 1000 (max. 8388607)
- 123 compressed objects within 2 object streams
- 34 named destinations out of 1000 (max. 500000)
- 115 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 172 PDF objects out of 1000 (max. 8388607)
+ 136 compressed objects within 2 object streams
+ 37 named destinations out of 1000 (max. 500000)
+ 128 words of extra memory for PDF output out of 10000 (max. 10000000)
 
