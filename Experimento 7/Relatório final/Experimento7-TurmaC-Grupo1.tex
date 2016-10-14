@@ -17,8 +17,8 @@
      
 \sloppy
 
-\title{Experimento 6\\ 
-	Circuitos Combinacionais: Codificador e Decodificador}
+\title{Experimento 7\\ 
+	Implementação de Circuitos Combinacionais com Multiplexadores}
 
 \author{
 	Lucas Mafra Chagas, 12/0126443 \\
@@ -36,99 +36,105 @@
 \maketitle
 
  \begin{abstract}
-   Write here a short summary of the report in English. This corresponds to the Experiment 7 report on combinational circuits, specifically the multiplexers.
- \end{abstract}
-     
+	 In this experiment, we focus on building combinational circuits using Multiplexers.
+ \end{abstract}  
  \begin{resumo} 
-  Escreva aqui um pequeno resumo do relatório. Este corresponde ao relatório do Experimento 7 sobre circuitos combinacionais, especificamente os multiplexadores.
+	O foco desse experimento é construir Circuitos Combinacionais utilizando Multiplexadores.
  \end{resumo}
-
-
 \section{Objetivos}
 \label{sec:Objetivos}
 
-Descrever aqui os objetivos do experimento.
+O objetivo deste experimento é adquirir conhecimento na implementação e também utilização de multiplexadores, que são circuitos combinacionais.
 
 \section{Materiais} 
 \label{sec:Materiais}
 
-\begin{itemize}
+\begin{itemize}						 							
     \item Painel Digital
-    
+ 
     \item \textit{protoboard}
     
-    \item Fios
+    \item Fios conectores
     
-    \item Portas Lógicas AND e NAND
+    \item Portas Lógicas NAND e NOT
+    
+	\item 2 x MUX-4
+	
+	\item DECOD-16
     
 \end{itemize}
 
 
 \section{Introdução}
 \label{sec:Introducao}
+\subsection{Multiplexadores e Demultiplexadores}
+Um multiplexador é um circuito combinacional lógico projetado que tem como saída única e compartilhada um e somente um de seus inputs de dados, a partir da aplicação de um sinal de controle. O demultiplexador, por sua vez, realiza a operação inversa.
 
-Escreva com suas palavras o que vai ser trabalhado no experimento. Aqui temos um exemplo de como citar a bibliografia consultada \cite{boulic:91} \cite{smith:99}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.5\textwidth]{estrmux.png}
+	\caption{Estrutura de um Multiplexador}
+	\label{fig:estmux}
+\end{figure}
 
+Sob o ponto de vista da implementação de seus circuitos, os multiplexadores e demultiplexadores são simplesmente circuitos combinacionais com diversas entradas e somente uma saída, ou vice-versa.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.5\textwidth]{muxedemux.png}
+	\caption{Implementação de um multiplexador com 7 portas NAND`s}
+	\label{fig:muxedemux}
+\end{figure}
+
+\subsection{Aplicações}
+	A eficiência dos sistemas de comunicação pode ser consideravelmente aumentada ao utilizar-se multiplexadores, por permitir a transmissão de diferentes tipos de dados (como áudio e vídeo) ao mesmo tempo, usando uma única linha de transmissão. Eles também são utilizados para implementar grandes quantidades de memória no computador, reduzindo drasticamente a quantidade de fios de cobre necessários para ligar conectar a memória a outras partes do circuito. Isso se deve ao fato de um multiplexador ser capaz de implementar qualquer função booleana genérica. Quando temos uma função em que obter a tabela verdade não é tão simples, a utilização de multiplexadores e demultiplexadores pode simplificar o problema da implementação dessa função.
+	
 \section{Procedimentos}
 \label{sec:Procedimentos}
 
-Escreva nesta seção os diversos itens pedidos no experimentos. 
-
-\subsection{Multiplexador de 4 entradas}
+\subsection{Usar um MUX - 4 duplo em MSI para implementar um somador completo.}
 \label{sec:Mux}
 
-Descrever o experimento realizado. Sempre  que colocar uma figura deve-se explicar o que se pretende que o leitor veja, ou uma análise logo após a figura. 
+Para um somador completo, temos que considerar as entradas A,B e C, com A e B sendo os bits na qual se quer somar e C sendo o carry vindo da soma anterior. Como saídas temos que considerar T e S, com S sendo o valor da soma dos 3 bits de entrada e T sendo o carry gerado por essa soma.	Temos portanto, que a tabela verdade para esse circuito seria:
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=.5\textwidth]{fig1.jpg}
-\caption{Uma figura}
-\label{fig:exemplo}
+\includegraphics[width=.5\textwidth]{tvsc.png}
+\caption{Tabela verdade de um Somador Completo}
+\label{fig:tvsc}
 \end{figure}
 
-A Figura~\ref{fig:exemplo} apresenta um exemplo de como usar e citar uma figura.
+Utilizando a tabela na Figura 5 como refrência e tendo em mente que o circuito deveria ser montado a partir de um MUX - 4 duplo, o seguinte esquema para o circuito a ser implementado foi projetado:
 
-Aqui temos um exemplo de como citar uma URL na bibliografia~\cite{systemverilog}.
-Aqui temos um exemplo de como criar um hiperlink. Veja
-\href{https://www.youtube.com/watch?v=EcNxjxKRQ6E}{aqui} um exemplo de vídeo.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.5\textwidth]{sc3e2s.png}
+	\caption{Esquema de um somador completo com 3 entradas e 2 saídas montado com um Multiplexador}
+	\label{fig:3e2s}
+\end{figure}
 
-Sempre identifique no site do vídeo:
-\begin{itemize}
-    \item o experimento: Experimento 7;
-    \item semestre: 2016-2;
-    \item a disciplina: CiC 116351 - Circuitos Digitais - Turma B;
-    \item a universidade: Universidade de Brasília (UnB);
-    \item os nomes dos componentes do grupo.
-\end{itemize}
+O esquema apresentado acima foi montado com base na seguinte ideia: como A e B são as chaves seletoras, precisamos com que as entradas de dados, que terão seus dados selecionados, apresentem os resultados corretos em suas respectivas saídas. Portanto, para a saída T, temos:
 
-É apresentado acima como fazer uma listagem não numerada.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.5\textwidth]{esparat.png}
+	\caption{Entradas de dados para a saída T}
+	\label{fig:est}
+\end{figure}
 
-\subsection{Demultiplexador}
-\label{sec:Demux}
+Vemos que quando AB selecionar a entrada $Y_{0}$, ou seja, quando AB = 00, que T possui o valor 0 independente da entrada C. Portanto, temos que a entrada de dados $Y_{0}$ precisa apresentar esse valor para que quando AB for igual a 00 a saída apresente o valor correto de T. O mesmo ocorre para o caso em que AB = 11, porém, ao invés de T possuir o valor 0, ele possui o valor 1. Assim, conectando $Y_{0}$ na terra e $Y_{1}$ na fonte, conseguimos estes valores. Já para os casos em que AB = 01 e AB =10, vemos que a saída T tem que ser igual ao valor de C. Portanto, quando AB selecionar a entrada de dados $Y_{1}$ ou $Y_{2}$, a saída tem que possuir o valor de C. Portanto, conectamos C à essas entradas de dados.
+Já para o caso da saída S temos a seguinte análise:
 
-Este é outro item do experimento.
-Aqui temos um exemplo de como construir e citar uma tabela, conforme mostrado na Tabela~\ref{tab:resultados}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.5\textwidth]{eds.png}
+	\caption{Entradas de dados para a saída S}
+	\label{fig:eds}
+\end{figure}
 
-\begin{table}[H]
-    \centering
-    \caption{Expected values of the obtained circuits' attributes.}
-    \begin{tabular}{|c|c|c|c|c|c|c|c|}
-    \cline{2-7}
-    \multicolumn{1}{c}{} & \multicolumn{3}{|c|}{Phase 1} & \multicolumn{3}{c|}{Phase 2} & \multicolumn{1}{c}{} \\
-    \hline
-    Experiment & $n_g$ & $n_l$ & $n_t$ & $n_g$ & $n_l$ & $n_t$ & $t(s)$ \\
-    \hline
-    1 bit full adder & 8.16 & 3.8 & 47.6 & 5.03 & 3.0 & 25.93 & 99.13 \\
-    2 bit full adder & 18.06 & 5.16 & 107.13 & 11.06 & 4.9 & 60.06 & 709.56 \\
-    2 bit multiplier & 14.2 & 4.03 & 74.33 & 7.7 & 2.2 & 37.53 & 357.76 \\
-    7 segment decoder & 47.53 & 5.83 & 270.46 & 32.86 & 5.0 & 176.4 & 740.63 \\
-    Karnaugh 1 bit full adder & 19.0 & 6.0 & 102.0 & 5.03 & 3.0 & 24.8 & 130.73 \\
-    \hline
-    \end{tabular}
-    \label{tab:resultados}
-\end{table}
+Quando AB = 00 e AB = 11 temos que a saída S é a mesma que o valor da variável S. Portanto, ao selecionar as entradas de dados $Z_{0}$ e $Z_{3}$ precisamos que elas apresentem o valor de C, explicando a conexão feita. Quando AB = 01 e AB = 10, ocorre o oposto: a saída C possui o valor de NOT C. Portanto, temos que as entradas $Z_{1}$ e $Z_{2}$ precisam conter esse valor. 
+Feito o esquema apresentado, o circuito foi montado e implementado com a ajuda dos materiais apresentados acima:
 
-Aqui devemos colocar uma apresentação e análise da tabela, explicando ao leitor o que se pretende mostrar.
 
 \section{Análise dos Resultados}
 \label{sec:Resultados}
@@ -140,23 +146,43 @@ Dica: Use pesquisa na Internet para tirar as dúvidas sobre edição em \LaTeX .
 \section{Conclusão}
 \label{sec:Conclusao}
 
-Concluir o relatório explanando rapidamente o que foi feito e os resultados obtidos, sempre correlacionando com os objetivos do experimento apresentado na Seção~\ref{sec:Objetivos}. 
-
-
-\bibliographystyle{sbc}
-\bibliography{relatorio}
-
+A realização do experimento resultou num excelente aprendizado a respeito dos multiplexadores e demultiplexadores. Na experiência, os multiplexadores são tomados como circuitos combinacionais e a relação deles com os demultiplexadores também foi estudada.
+Foi possível concluir que um multiplexador é uma ótima ferramenta para gerar funções booleanas. A simplificação de funções booleanas, como sempre, ajuda a simplificar o experimento, realçando novamente sua importância. A complexidade do experimento e o curto espaço de tempo que se tem para realiza-lo não permite atrasos de nenhum tipo e a simplificação das funções é de extrema ajuda nesse sentido
 
 \newpage 
 % Colocar aqui apenas as respostas dos itens da Auto-Avaliação
 \section*{Auto-Avaliação}
 
 \begin{enumerate}
-    \item a
-    \item c
-    \item b
-    \item d
+    \item C
+    \item C
+    \item E
+    \item C
+    \item E
+    \item C
+    \item C
+    \item C
+    \item E
+    \item E
+    \item C
 \end{enumerate}
 
-
+\begin{table}[H]
+	\centering
+	\caption{Expected values of the obtained circuits' attributes.}
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\cline{2-7}
+		\multicolumn{1}{c}{} & \multicolumn{3}{|c|}{Phase 1} & \multicolumn{3}{c|}{Phase 2} & \multicolumn{1}{c}{} \\
+		\hline
+		Experiment & $n_g$ & $n_l$ & $n_t$ & $n_g$ & $n_l$ & $n_t$ & $t(s)$ \\
+		\hline
+		1 bit full adder & 8.16 & 3.8 & 47.6 & 5.03 & 3.0 & 25.93 & 99.13 \\
+		2 bit full adder & 18.06 & 5.16 & 107.13 & 11.06 & 4.9 & 60.06 & 709.56 \\
+		2 bit multiplier & 14.2 & 4.03 & 74.33 & 7.7 & 2.2 & 37.53 & 357.76 \\
+		7 segment decoder & 47.53 & 5.83 & 270.46 & 32.86 & 5.0 & 176.4 & 740.63 \\
+		Karnaugh 1 bit full adder & 19.0 & 6.0 & 102.0 & 5.03 & 3.0 & 24.8 & 130.73 \\
+		\hline
+	\end{tabular}
+	\label{tab:resultados}
+\end{table}
 \end{document}
