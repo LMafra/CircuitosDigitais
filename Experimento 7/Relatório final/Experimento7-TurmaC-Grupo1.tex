@@ -136,6 +136,7 @@ Quando AB = 00 e AB = 11 temos que a saída S é a mesma que o valor da variáve
 Feito o esquema apresentado, o circuito foi montado e implementado com a ajuda dos materiais apresentados acima:
 
 \subsection{Implementar uma função de 7 variáveis usando um multiplexador com 8 entradas de dados (MUX-8) construído com 2 multiplexadores com 4 entradas de dados (MUX-4 duplo)}
+\label{sec:Demux}
 
 A função que foi implementada nesta parte do experimento é a seguinte:
 
@@ -165,12 +166,12 @@ Portanto, temos que no esquema, o decodificador será da seguinte forma:
 Antes de definir o que fazer com as saídas do decodificador é necessário primeiramente analisar as variáveis restantes. Fazendo esta análise na forma de tabela verdade, temos:
 
 
+É possível ver o resultado no seguinte link: \href{https://youtu.be/T1X_-Ha7S-g}{Vídeo no Youtube}
+
+
 \section{Análise dos Resultados}
 \label{sec:Resultados}
 
-Faça uma análise crítica dos resultados obtidos nos experimentos. Esta análise pode ser feita item a item ou de uma forma geral.
-
-Dica: Use pesquisa na Internet para tirar as dúvidas sobre edição em \LaTeX .
 
 \section{Conclusão}
 \label{sec:Conclusao}
@@ -196,22 +197,4 @@ Foi possível concluir que um multiplexador é uma ótima ferramenta para gerar 
     \item C
 \end{enumerate}
 
-\begin{table}[H]
-	\centering
-	\caption{Expected values of the obtained circuits' attributes.}
-	\begin{tabular}{|c|c|c|c|c|c|c|c|}
-		\cline{2-7}
-		\multicolumn{1}{c}{} & \multicolumn{3}{|c|}{Phase 1} & \multicolumn{3}{c|}{Phase 2} & \multicolumn{1}{c}{} \\
-		\hline
-		Experiment & $n_g$ & $n_l$ & $n_t$ & $n_g$ & $n_l$ & $n_t$ & $t(s)$ \\
-		\hline
-		1 bit full adder & 8.16 & 3.8 & 47.6 & 5.03 & 3.0 & 25.93 & 99.13 \\
-		2 bit full adder & 18.06 & 5.16 & 107.13 & 11.06 & 4.9 & 60.06 & 709.56 \\
-		2 bit multiplier & 14.2 & 4.03 & 74.33 & 7.7 & 2.2 & 37.53 & 357.76 \\
-		7 segment decoder & 47.53 & 5.83 & 270.46 & 32.86 & 5.0 & 176.4 & 740.63 \\
-		Karnaugh 1 bit full adder & 19.0 & 6.0 & 102.0 & 5.03 & 3.0 & 24.8 & 130.73 \\
-		\hline
-	\end{tabular}
-	\label{tab:resultados}
-\end{table}
 \end{document}

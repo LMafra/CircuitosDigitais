@@ -120,7 +120,7 @@ Para este experimento, será criado um codificafor decimal-Código de Gray e um 
 \section{Procedimentos}
 \label{sec:Procedimentos}
 
-Neste relatório, precisamos fazer:
+Neste relatório foi preciso:
 \begin{itemize}
 	\item Obter as funções booleanas para o codificador.
 	\item Fazer simulações funcional e temporal do diagrama lógico do codificador no Quartus. 
@@ -171,12 +171,40 @@ A partir do diagrama lógico total, realizamos a simulação funcional e tempora
 \subsection{Funções Booleanas para o Decodificador}
 \label{sec:Decod}
 
+
+É possível obter as seguintes funções booleanas para o decodificador utilizando o mapa de Karnaugh:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{dontcare.png}
+	\caption{Mapa de Karnaugh.}
+	\label{fig:dontcare}
+\end{figure}
+\newpage
+
+\begin{center}
+	$ 0 = \overline{B}.\overline{C}.\overline{D}\\$
+	$ 1 = \overline{B}.\overline{C}.D\\$
+	$ 2 = \overline{B}.C.D\\$
+	$ 3 = \overline{B}.C.\overline{D}\\$
+	$ 4 = B.C.\overline{D}\\$
+	$ 5 = B.C.D\\$
+	$ 6 = \overline{A}.B.\overline{C}.D\\$
+	$ 7 = \overline{A}.B.\overline{C}.\overline{D}\\$
+	$ 8 = A.\overline{C}.\overline{D}\\$
+	$ 9 = \overline{A}.D$
+\end{center}	
+
+Com as fórmulas supracitadas, é possível fazer o diagrama lógico total abaixo.
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{decoder.png}
 	\caption{Diagrama Lógico do decodificador.}
 	\label{fig:decoder}
 \end{figure}
+
+A partir do diagrama lógico total, realizamos a simulação funcional e temporal e obtivemos os seguintes gráficos.
 
 \begin{figure}[H]
 	\centering
@@ -191,14 +219,15 @@ A partir do diagrama lógico total, realizamos a simulação funcional e tempora
 	\caption{Simulação temporal do decodificador.}
 	\label{fig:timedecoder}
 \end{figure}
-
-A tabela verdade abaixo 
-
+ 
+ E obtivemos a tabela verdade.
+ 
 \begin{table}[H]
 	\centering
+	\caption{Tabela Verdade do Decodificador.}
 	\begin{tabular}{|c|c|c|c|c|}
 		\cline{1-5}
-		\multicolumn{1}{|c|}{Decimal} & \multicolumn{1}{|c|}{A} & \multicolumn{1}{|c|}{B} & \multicolumn{1}{|c|}{C} & \multicolumn{1}{|c|}{D}\\
+		\multicolumn{1}{|c|}{Entrada} & \multicolumn{1}{|c|}{A} & \multicolumn{1}{|c|}{B} & \multicolumn{1}{|c|}{C} & \multicolumn{1}{|c|}{D}\\
 		\hline
 		S0 & 0 & 0 & 0 & 0 \\
 		\hline
@@ -229,7 +258,7 @@ A tabela verdade abaixo
 
 \subsection{Funcionamento do Codificador e Decodificador}
 
-Desenvolvemos no kit de desenvolvimento em FPGA DE2 Altera o código projetado com o codificador e decodificador projetado na imagem abaixo. 
+Sintetizamos e rodamos no kit de desenvolvimento em FPGA DE2 Altera o código projetado com o codificador e decodificador. 
 
 \begin{figure}[H]
 	\centering
