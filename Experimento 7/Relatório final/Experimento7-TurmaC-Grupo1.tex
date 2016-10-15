@@ -133,9 +133,12 @@ Já para o caso da saída S temos a seguinte análise:
 \end{figure}
 
 Quando AB = 00 e AB = 11 temos que a saída S é a mesma que o valor da variável S. Portanto, ao selecionar as entradas de dados $Z_{0}$ e $Z_{3}$ precisamos que elas apresentem o valor de C, explicando a conexão feita. Quando AB = 01 e AB = 10, ocorre o oposto: a saída C possui o valor de NOT C. Portanto, temos que as entradas $Z_{1}$ e $Z_{2}$ precisam conter esse valor. 
-Feito o esquema apresentado, o circuito foi montado e implementado com a ajuda dos materiais apresentados acima:
+Feito o esquema apresentado, o circuito foi montado e implementado com a ajuda dos materiais apresentados acima.
+É possível ver o resultado no seguinte link: \href{https://youtu.be/T1X_-Ha7S-g}{Vídeo no Youtube}
 
-\subsection{Implementar uma função de 7 variáveis usando um multiplexador com 8 entradas de dados (MUX-8) construído com 2 multiplexadores com 4 entradas de dados (MUX-4 duplo)}
+Erramos na hora de falar a saída de A=0, B=1 e C=0, mas o resultado revisado vendo o vídeo esta correto, no caso T=0 e S=0.
+
+\subsection{Implementar uma função de 7 variáveis usando um multiplexador com 8 entradas de dados (MUX-8) construído com 2 multiplexadores usando 4 entradas de dados (MUX-4 duplo)}
 \label{sec:Demux}
 
 A função que foi implementada nesta parte do experimento é a seguinte:
@@ -165,19 +168,56 @@ Portanto, temos que no esquema, o decodificador será da seguinte forma:
 
 Antes de definir o que fazer com as saídas do decodificador é necessário primeiramente analisar as variáveis restantes. Fazendo esta análise na forma de tabela verdade, temos:
 
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		\multicolumn{1}{|c}{E}  & \multicolumn{1}{|c|}{F} & \multicolumn{1}{|c|}{G} & \multicolumn{1}{|c|}{S} & \multicolumn{1}{c|}{Entrada de dados ativada}\\
+		\hline
+		0 & 0 & 0 & 0 & $Y_{0}$\\
+		0 & 0 & 1 & 1 & $Y_{1}$\\
+		0 & 1 & 0 & 1 & $Y_{2}$\\
+		0 & 1 & 1 & 1 & $Y_{3}$\\
+		1 & 0 & 0 & 1 & $Z_{0}$\\
+		1 & 0 & 1 & 0 & $Z_{1}$\\
+		1 & 1 & 0 & 1 & $Z_{2}$\\
+		1 & 1 & 1 & 1 & $Z_{3}$\\
+		\hline
+	\end{tabular}
+	\caption{Tabela verdade para as 3 variáveis menos significativas da função f}
+	\label{tab:TVF}
+\end{table}
 
-É possível ver o resultado no seguinte link: \href{https://youtu.be/T1X_-Ha7S-g}{Vídeo no Youtube}
+Cada elemento da saída nessa tabela de dados corresponderá à uma entrada de dados no MUX - 4 duplo. Porém, temos que o MUX - 4 duplo tem apenas 2 entradas de seleção, e aqui temos 3 variáveis. Observando bem, podemos chegar à uma conclusão: quando E = 0, nenhuma das entradas de dados Z estará ativada. O oposto ocorre quando E = 1. Portanto, para este circuito, a variável E será incrementada na entrada de ativação de cada MUX - 4 dentro do MUX - 8. Essa ativação estabelece que quando E = 0, o MUX funciona normalmente. Quando a entrada está em 1, não importa os valores nos seletores e nem nas entradas de dados, a saída será 0. Essa configuração nos permite inserir as 3 variáveis e obter o resultado desejado. Temos, portanto, que o esquema do multiplexador duplo para esse circuito será da seguinte forma: 
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.5\textwidth]{muximp.png}
+	\caption{Esquema do multiplexador a ser implementado}
+	\label{fig:emux}
+\end{figure}
+
+Agora, juntando os dois esquemas é possível implementar definir as entradas de dados e implementar as funções. Para EFG = 000 temos que a saída será 0 independente do valor das variáveis mais significativas Quando EFG = 001, temos, olhando a função  que as variáveis mais significativas precisam ser correspondentes à  e . Portanto, para que a saída seja correta, precisamos que a entrada de dados $Y_{1}$ precisa ter como entrada  OU . Quando EFG = 010, as quatro variáveis mais significativas formam . Portanto, a entrada de dados de $Y_{2}$ é justamente a saída 7 do decodificador. Vemos que quando FG = 11, que a saída será 1 independente dos outros termos. Portanto, as entradas de dados $Y_{3}$ e $Z_{3}$ podem estar sempre conectadas à fonte. Quando EFG = 100 temos que ABCD são os minitermos 9 e 15. Isso implica que $Z_{0}$ tem que estar conectado à união dos dois. Quando EFG = 101 temos o mesmo caso que o de EFG = 000. Finalmente, quando EFG = 110 temos que ABCD corresponde ao minitermo 11. Portanto, $Z_{2}$ precisa ter como entrada a saída desse minitermo no decodificador. A partir dessas informações foi possível montar o esquema do circuito completo.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.5\textwidth]{decodmux.png}
+	\caption{Esquema da função f utilizando um DECOD -16 e um MUX - 4 duplo}
+	\label{fig:decodmux}
+\end{figure}
+
+Obs.: Como a saída do decodificador era invertida, a porta NAND foi utilizada para substituir a porta OR. Além disso, como o multiplexador possui 2 saídas, temos que a saída será válida se uma delas for verdadeira. Por isso a porta OR foi utilizada ao final: para transformar as duas saídas em uma.
 
 \section{Análise dos Resultados}
 \label{sec:Resultados}
 
+Não foi possível realizar a implementação do segundo circuito, graças a queda do moodle no dia do experimento, mas a análise da segunda parte foi feita e a primeira parte foi um sucesso, portanto o experimento foi executado de acordo como pedido no roteiro. Então, o experimento foi um sucesso.
 
 \section{Conclusão}
 \label{sec:Conclusao}
 
 A realização do experimento resultou num excelente aprendizado a respeito dos multiplexadores e demultiplexadores. Na experiência, os multiplexadores são tomados como circuitos combinacionais e a relação deles com os demultiplexadores também foi estudada.
-Foi possível concluir que um multiplexador é uma ótima ferramenta para gerar funções booleanas. A simplificação de funções booleanas, como sempre, ajuda a simplificar o experimento, realçando novamente sua importância. A complexidade do experimento e o curto espaço de tempo que se tem para realiza-lo não permite atrasos de nenhum tipo e a simplificação das funções é de extrema ajuda nesse sentido
+Foi possível concluir que um multiplexador é uma ótima ferramenta para gerar funções booleanas. A simplificação de funções booleanas, como sempre, ajuda a simplificar o experimento, realçando novamente sua importância. A complexidade do experimento e o curto espaço de tempo que se tem para realiza-lo não permite atrasos de nenhum tipo e a simplificação das funções é de extrema ajuda nesse sentido.
 
 \newpage 
 % Colocar aqui apenas as respostas dos itens da Auto-Avaliação
