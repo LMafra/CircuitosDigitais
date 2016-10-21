@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.8.20)  21 OCT 2016 15:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.8.20)  21 OCT 2016 18:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1090,7 +1090,7 @@ File: omsptm.fd
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 56.
 
-<latchRS.png, id=51, 239.89626pt x 174.6525pt>
+<latchRS.png, id=71, 239.89626pt x 174.6525pt>
 File: latchRS.png Graphic file (type png)
  <use latchRS.png>
 Package pdftex.def Info: latchRS.png used on input line 77.
@@ -1105,47 +1105,53 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<RSgat.png, id=65, 352.31625pt x 190.7125pt>
+<RSgat.png, id=85, 352.31625pt x 190.7125pt>
 File: RSgat.png Graphic file (type png)
  <use RSgat.png>
 Package pdftex.def Info: RSgat.png used on input line 90.
 (pdftex.def)             Requested size: 213.39568pt x 115.51381pt.
 
-<RSgatPC.png, id=66, 359.3425pt x 230.8625pt>
+<RSgatPC.png, id=86, 359.3425pt x 230.8625pt>
 File: RSgatPC.png Graphic file (type png)
  <use RSgatPC.png>
 Package pdftex.def Info: RSgatPC.png used on input line 104.
 (pdftex.def)             Requested size: 213.39568pt x 137.10245pt.
- [2 <./latchRS.png> <./RSgat.png>] <ffMS.png, id=77, 680.5425pt x 248.93pt>
+ [2 <./latchRS.png> <./RSgat.png>] <ffMS.png, id=97, 680.5425pt x 248.93pt>
 File: ffMS.png Graphic file (type png)
  <use ffMS.png>
 Package pdftex.def Info: ffMS.png used on input line 115.
 (pdftex.def)             Requested size: 213.39568pt x 78.0563pt.
 
-<ffJKMS.png, id=78, 680.5425pt x 248.93pt>
+<ffJKMS.png, id=98, 680.5425pt x 248.93pt>
 File: ffJKMS.png Graphic file (type png)
  <use ffJKMS.png>
 Package pdftex.def Info: ffJKMS.png used on input line 126.
 (pdftex.def)             Requested size: 213.39568pt x 78.0563pt.
- [3 <./RSgatPC.png> <./ffMS.png> <./ffJKMS.png>] [4] [5]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 164.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 164.
+ [3 <./RSgatPC.png> <./ffMS.png> <./ffJKMS.png>]
+Underfull \hbox (badness 1199) in paragraph at lines 140--141
+[]\OT1/ptm/m/n/12 Montar o cir-cuito de um flip-flop RS MESTRE-ESCRAVO us-ando 
+por-tas
+ []
+
+[4] [5]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 218.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 218.
  (./Experimento8-TurmaC-Grupo1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 164.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 164.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 218.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 218.
 Package rerunfilecheck Info: File `Experimento8-TurmaC-Grupo1.out' has not chan
 ged.
-(rerunfilecheck)             Checksum: 62B7A9769CAAEB9C89888DDFA34D87D3;673.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 164.
+(rerunfilecheck)             Checksum: 8B7F4FA8105E0EABC6468D4BEC4B0C34;1233.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 218.
  ) 
 Here is how much of TeX's memory you used:
- 18772 strings out of 494910
- 341171 string characters out of 6179836
- 414490 words of memory out of 5000000
- 21675 multiletter control sequences out of 15000+600000
+ 18788 strings out of 494910
+ 341355 string characters out of 6179836
+ 415930 words of memory out of 5000000
+ 21686 multiletter control sequences out of 15000+600000
  22618 words of font info for 46 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 62i,10n,56p,697b,326s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,10n,56p,697b,380s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/f
@@ -1155,10 +1161,10 @@ etic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Experimento8-TurmaC-Grupo1.pdf (5 pages, 148120 bytes).
+Output written on Experimento8-TurmaC-Grupo1.pdf (5 pages, 150579 bytes).
 PDF statistics:
- 143 PDF objects out of 1000 (max. 8388607)
- 115 compressed objects within 2 object streams
- 29 named destinations out of 1000 (max. 500000)
- 126 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 167 PDF objects out of 1000 (max. 8388607)
+ 139 compressed objects within 2 object streams
+ 34 named destinations out of 1000 (max. 500000)
+ 166 words of extra memory for PDF output out of 10000 (max. 10000000)
 

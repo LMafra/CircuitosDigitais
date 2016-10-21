@@ -131,14 +131,62 @@ Este flip-flop permite a utilização do antes estado proibido. Temos que quando
 \section{Procedimentos}
 \label{sec:Procedimentos}
 
+O relatório é dividido em 5 etapas:
+
+\begin{itemize}
+	\item Montar o circuito Latch RS com portas NAND
+	\item Montar o circuito Latch engatilhado
+	\item Montar o circuito Latch engatilhado com entradas PRESET e CLEAR
+	\item Montar o circuito de um flip-flop RS MESTRE-ESCRAVO usando portas NAND’s
+	\item Montar o circuito de um flip-flop JK MESTRE-ESCRAVO
+\end{itemize}
+
+Esse experimento é montado de forma gradual, assim um circuito está diretamente ligado ao outro.
+
+\subsection{Implementação de um circuito Latch RS com portas NAND}
+\label{2.1}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+		\cline{1-4}
+		\caption{Tabela-Verdade do Latch RS}
+		\multicolumn{1}{|c|}{S} & \multicolumn{1}{|c|}{R} & \multicolumn{1}{|c|}{Q} & \multicolumn{1}{|c|}{$\overline{Q}$} \\
+		\hline
+		1 & 0 & 1 & 0  \\
+		\hline
+		1 & 1 & 0 & 0 \\
+		\hline
+		0 & 1 & 0 & 1  \\
+		\hline
+		1 & 1 & 0 & 0  \\
+		\hline
+		0 & 0 & 0 & 1  \\
+		\hline
+		1 & 1 & 0 & 0  \\
+		\hline
+	\end{tabular}
+	
+\end{table} 
+
+\subsection{Implementação de um circuito Latch engatilhado}
+\label{2.2}
 
 \href{https://youtu.be/azJt3y337BE}{Vídeo 2.2}
 
+\subsection{Implementação de um circuito de Latch RS com portas NAND}
+\label{2.3}
+
 \href{https://youtu.be/1GDHpbQ8CnU}{Vídeo 2.3}
+
+\subsection{Implementação de um circuito de Latch RS com portas NAND}
+\label{2.4}
 
 \href{https://youtu.be/c2MW7RQl_7s}{Vídeo 2.4}
 
-Escreva nesta seção os diversos itens pedidos no experimentos. 
+\subsection{Implementação de um circuito de Latch RS com portas NAND}
+\label{2.5}
+
 
 
 \section{Análise dos Resultados}
