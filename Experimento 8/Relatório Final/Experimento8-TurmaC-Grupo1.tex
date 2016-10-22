@@ -14,6 +14,20 @@
 \usepackage{algorithmic}
 \usepackage{algorithm}
 \usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{tikz}
+\newcommand\net{%
+	\begin{tikzpicture}[scale=0.3\baselineskip/18pt]
+	\draw (0,1) -- (1,1) -- (1,0) -- (2,0);
+	\end{tikzpicture}%
+}
+
+\newcommand\netp{%
+	\begin{tikzpicture}[scale=0.3\baselineskip/18pt]
+	\draw (0,1) -- (1,1) -- (1,0) -- (2,0) -- (2,1) -- (3,1);
+	\end{tikzpicture}%
+}
+
 
 \sloppy
 
@@ -144,58 +158,148 @@ O relatório é dividido em 5 etapas:
 Esse experimento é montado de forma gradual, assim um circuito está diretamente ligado ao outro.
 
 \subsection{Implementação de um circuito Latch RS com portas NAND}
-\label{2.1}
+\label{sec:2.1}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.5\textwidth]{latchRSNAND.png}
+	\caption{Latch RS utilizando portas NAND}
+	\label{fig:lRSNAND}
+\end{figure}
+
+Resultados obtidos para Q e $\overline{Q}$ para a sequência 10,11,01,11,00,11 de $\overline{SET}$ e $\overline{RESET}$
+
+Observação: para este flip-flop temos que o $\overline{SET}$ e o $\overline{RESET}$ estão ativados em nível 0 ao invés de nível 1. Para as outras partes do experimento temos o caso oposto.
 
 \begin{table}[H]
 	\centering
 	\begin{tabular}{|c|c|c|c|}
 		\cline{1-4}
-		\caption{Tabela-Verdade do Latch RS}
 		\multicolumn{1}{|c|}{S} & \multicolumn{1}{|c|}{R} & \multicolumn{1}{|c|}{Q} & \multicolumn{1}{|c|}{$\overline{Q}$} \\
 		\hline
-		1 & 0 & 1 & 0  \\
+		1 & 0 & 0 & 1  \\
 		\hline
-		1 & 1 & 0 & 0 \\
+		1 & 1 & 0 & 1 \\
 		\hline
-		0 & 1 & 0 & 1  \\
+		0 & 1 & 1 & 0  \\
 		\hline
-		1 & 1 & 0 & 0  \\
+		1 & 1 & 1 & 0  \\
 		\hline
-		0 & 0 & 0 & 1  \\
+		0 & 0 & 1 & 1  \\
 		\hline
-		1 & 1 & 0 & 0  \\
+		1 & 1 & 0 & 1  \\
 		\hline
 	\end{tabular}
-	
-\end{table} 
+	\caption{Tabela-Verdade do Latch RS}
+\end{table}
 
-\subsection{Implementação de um circuito Latch engatilhado}
-\label{2.2}
+Vemos que quando $\overline{RESET}$ está ativado, temos que a saída Q é igual a 0 e a saída $\overline{Q}$ é igual a 1. Ao desligarmos o $\overline{RESET}$, deixando ambos o $\overline{SET}$ e o $\overline{RESET}$ em repouso, temos que o flip-flop mantém essa configuração das saídas armazenadas. Esse armazenamento também ocorre quando ativamos o $\overline{SET}$ e desativamos o $\overline{RESET}$. A única diferença é que neste caso, Q é 1 e $\overline{Q}$ é 0. Finalmente, quando ativamos ambos $\overline{SET}$ e $\overline{RESET}$ temos o estado proibido onde tanto Q como $\overline{Q}$ são iguais a 1, o que é uma incoerência. Ao desligarmos as chaves após o estado proibido, temos Q e $\overline{Q}$ apresentando um resultado qualquer. 
+A partir disso, vemos que a tabela verdade obtida para este circuito é:
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+		\cline{1-4}
+		\multicolumn{1}{|c|}{S} & \multicolumn{1}{|c|}{R} & \multicolumn{1}{|c|}{$Q_{n+1}$} & \multicolumn{1}{|c|}{$\overline{Q_{n+1}}$} \\
+		\hline
+		0 & 0 & 1 & 1  \\
+		\hline
+		0 & 1 & 1 & 0 \\
+		\hline
+		1 & 0 & 0 & 1  \\
+		\hline
+		1 & 1 & $Q$ & $\overline{Q}$  \\
+		\hline
+	\end{tabular}
+	\caption{Tabela-Verdade do Latch RS}
+\end{table}
+
+
+\subsection{Implementação de um circuito Latch gatilhado}
+\label{sec:2.2}
 
 \href{https://youtu.be/azJt3y337BE}{Vídeo 2.2}
 
-\subsection{Implementação de um circuito de Latch RS com portas NAND}
-\label{2.3}
+Vemos pelo vídeo que quando o gatilho T está desligado, ele armazena o último valor de Q e $\overline{Q}$ que foram inseridos, independente do ativamento ou desativamento de $\overline{SET}$ e $\overline{RESET}$. Antes de T estar desligado, tínhamos a chave RESET acionada, por isso que Q era 0 e $\overline{Q}$ era 1. Já quando temos T ativado, ou seja, acionado em 1, temos que o alterando SET e RESET obtemos os mesmos valores da tabela verdade em ~\ref{sec:2.1}. Temos portanto que T define se o flip-flop está em repouso ou se ele está recebendo informação. Quando T é igual a 0 e o flip-flop está em repouso, temos que a saída referente à última entrada aplicada fica retida dentro do flip flop. Ficamos, portanto, com a seguinte tabela verdade:
 
-\href{https://youtu.be/1GDHpbQ8CnU}{Vídeo 2.3}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|}
+		\cline{1-5}
+		\multicolumn{1}{|c|}{T} & \multicolumn{1}{|c|}{S} & \multicolumn{1}{|c|}{R} & \multicolumn{1}{|c|}{$Q_{n+1}$} & \multicolumn{1}{|c|}{$\overline{Q_{n+1}}$} \\
+		\hline
+		0 & X & X & $Q_{n}$ & $\overline{Q_{n}}$  \\
+		\hline
+		1 & 0 & 0 & $Q_{n}$ & $\overline{Q_{n}}$  \\
+		\hline
+		1 & 0 & 1 & 0 & 1 \\
+		\hline
+		1 & 1 & 0 & 1 & 0  \\
+		\hline
+		1 & 1 & 1 & 1 & 1  \\
+		\hline
+	\end{tabular}
+	\caption{Tabela-Verdade do Latch gatilhado}
+\end{table}
 
-\subsection{Implementação de um circuito de Latch RS com portas NAND}
-\label{2.4}
+\subsection{Implementação flip-flop RS SENHOR-ESCRAVO com portas NAND}
+\label{sec:2.3}
 
-\href{https://youtu.be/c2MW7RQl_7s}{Vídeo 2.4}
+\href{https://youtu.be/c2MW7RQl_7s}{Vídeo 2.3}
 
-\subsection{Implementação de um circuito de Latch RS com portas NAND}
-\label{2.5}
+Após construído o circuito, para cada possível entrada das chaves $SET$ e $RESET$ foi observada a saída do ESCRAVO após cada pulso aplicado em T. A análise foi feita a partir de pulsos pois para este tipo de circuito quando temos T=0, temos a informação sendo passada do flip-flop SENHOR para o flip-flop ESCRAVO e quanto T=1 temos que o flip-flop ESCRAVO aguarda enquanto alteramos valores no flip-flop SENHOR, e queríamos fazer a observação do que o flip-flop armazenava após uma mudança(um pulso) completo. A partir disso, constroi-se a seguinte tabela verdade:
 
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|}
+		\cline{1-5}
+		\multicolumn{1}{|c|}{T} & \multicolumn{1}{|c|}{S} & \multicolumn{1}{|c|}{R} & \multicolumn{1}{|c|}{$Q_{n+1}$} & \multicolumn{1}{|c|}{$\overline{Q_{n+1}}$} \\
+		\hline
+		0 & X & X & $Q_{n}$ & $\overline{Q_{n}}$  \\
+		\hline
+		pulse & 0 & 0 & $Q_{n}$ & $\overline{Q_{n}}$  \\
+		\hline
+		pulse & 0 & 1 & 0 & 1 \\
+		\hline
+		pulse & 1 & 0 & 1 & 0  \\
+		\hline
+		pulse & 1 & 1 & 1 & 1  \\
+		\hline
+	\end{tabular}
+	\caption{Tabela-Verdade do Flip-flop SENHOR-ESCRAVO}
+\end{table}
+pulse = \netp~
+
+Vemos pela tabela e pelas imagens que o escravo armazenava o valor após o fim do pulso, alterado quando T = 1. Temos portanto, que a construção deste flip-flop teve sucesso.
+
+\subsection{Implementação de um flip-flop JK SENHOR-ESCRAVO com portas NAND}
+\label{sec:2.4}
+
+Com base na imagem abaixo e reutilizando os flip-flops construídos anteriormente, devia-se montar o circuito de um flip-flop JK SENHOR-ESCRAVO.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.5\textwidth]{ffJKMS.png}
+	\caption{Flip-Flop JK SENHOR-ESCRAVO (Master-Slave)}
+	\label{fig:ffJKMS}
+\end{figure} 
+
+E sua tabela deveria ser:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.5\textwidth]{tvjkms.png}
+	\caption{Tabela verdade do Flip-Flop JK SENHOR-ESCRAVO (Master-Slave)}
+	\label{fig:tvJKMS}
+\end{figure}
+
+Mas, infelizmente, por conta de alguns fios com problemas, não conseguimos finalizar essa parte.
 
 
 \section{Análise dos Resultados}
 \label{sec:Resultados}
 
-Faça uma análise crítica dos resultados obtidos nos experimentos. Esta análise pode ser feita item a item ou de uma forma geral.
-
-Dica: Use pesquisa na Internet para tirar as dúvidas sobre edição em \LaTeX .
-
+Analisando os dados da sessão ~\ref{sec:2.1} à ~\ref{sec:2.3}, conseguimos comparar as tabelas verdades resultantes do experimento com as tabelas fornecidas pelo roteiro do experimento 8, mesmo que não tenhamos conseguido terminar a parte ~\ref{sec:2.4}, a maior parte dos resultados está dentro dos conformes, portanto, consideramos o experimento um sucesso.
 \section{Conclusão}
 \label{sec:Conclusao}
 
