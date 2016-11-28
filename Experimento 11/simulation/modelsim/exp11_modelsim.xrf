@@ -1,0 +1,13 @@
+vendor_name = ModelSim
+source_file = 1, /home/lmafra/Documentos/UnB/CD/Experimentos/Experimento 11/ffjknand.bdf
+source_file = 1, /home/lmafra/Documentos/UnB/CD/Experimentos/Experimento 11/Waveform.vwf
+source_file = 1, /home/lmafra/Documentos/UnB/CD/Experimentos/Experimento 11/output_files/Waveform.vwf
+source_file = 1, /home/lmafra/Documentos/UnB/CD/Experimentos/Experimento 11/db/exp11.cbx.xml
+design_name = ffjknand
+instance = comp, \LEDR[0]~I , LEDR[0], ffjknand, 1
+instance = comp, \inst5~0 , inst5~0, ffjknand, 1
+instance = comp, \inst4~0 , inst4~0, ffjknand, 1
+instance = comp, \inst6~0 , inst6~0, ffjknand, 1
+instance = comp, \LEDG[2]~I , LEDG[2], ffjknand, 1
+instance = comp, \LEDG[1]~I , LEDG[1], ffjknand, 1
+instance = comp, \LEDG[0]~I , LEDG[0], ffjknand, 1
