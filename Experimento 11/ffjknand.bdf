@@ -23,7 +23,7 @@ applicable agreement for further details.
 	(input)
 	(rect 216 272 232 440)
 	(text "INPUT" (rect 0 14 9 43)(font "Arial" (font_size 6))(vertical))
-	(text "LEDR[0]" (rect 1 112 11 152)(font "Arial" )(vertical))
+	(text "CLOCK" (rect 1 112 11 149)(font "Arial" )(vertical))
 	(pt 8 0)
 	(drawing
 		(line (pt 12 84)(pt 12 59))
@@ -35,12 +35,13 @@ applicable agreement for further details.
 	)
 	(rotate90)
 	(text "VCC" (rect 7 19 16 40)(font "Arial" (font_size 6))(vertical))
+	(annotation_block (location)(rect 144 440 216 456))
 )
 (pin
 	(output)
 	(rect 408 280 424 456)
 	(text "OUTPUT" (rect 7 1 16 41)(font "Arial" (font_size 6))(vertical))
-	(text "LEDG[0]" (rect 6 90 16 131)(font "Arial" )(vertical))
+	(text "Q0" (rect 7 89 17 104)(font "Arial" )(vertical))
 	(pt 8 0)
 	(drawing
 		(line (pt 8 0)(pt 8 52))
@@ -52,12 +53,13 @@ applicable agreement for further details.
 		(line (pt 4 78)(pt 8 82))
 	)
 	(rotate270)
+	(annotation_block (location)(rect 424 456 496 472))
 )
 (pin
 	(output)
 	(rect 576 288 592 464)
 	(text "OUTPUT" (rect 7 1 16 41)(font "Arial" (font_size 6))(vertical))
-	(text "LEDG[1]" (rect 6 90 16 131)(font "Arial" )(vertical))
+	(text "Q1" (rect 7 89 17 104)(font "Arial" )(vertical))
 	(pt 8 0)
 	(drawing
 		(line (pt 8 0)(pt 8 52))
@@ -69,12 +71,13 @@ applicable agreement for further details.
 		(line (pt 4 78)(pt 8 82))
 	)
 	(rotate270)
+	(annotation_block (location)(rect 592 464 664 480))
 )
 (pin
 	(output)
 	(rect 904 280 920 456)
 	(text "OUTPUT" (rect 7 1 16 41)(font "Arial" (font_size 6))(vertical))
-	(text "LEDG[2]" (rect 6 90 16 131)(font "Arial" )(vertical))
+	(text "Q2" (rect 7 89 17 104)(font "Arial" )(vertical))
 	(pt 8 0)
 	(drawing
 		(line (pt 8 0)(pt 8 52))
@@ -86,6 +89,7 @@ applicable agreement for further details.
 		(line (pt 4 78)(pt 8 82))
 	)
 	(rotate270)
+	(annotation_block (location)(rect 920 456 984 472))
 )
 (symbol
 	(rect 128 48 192 96)

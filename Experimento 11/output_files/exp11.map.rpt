@@ -1,5 +1,5 @@
 Analysis & Synthesis report for exp11
-Fri Nov 25 10:47:35 2016
+Thu Dec  1 19:01:04 2016
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -41,7 +41,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 25 10:47:35 2016           ;
+; Analysis & Synthesis Status        ; Successful - Thu Dec  1 19:01:04 2016           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; exp11                                           ;
 ; Top-level Entity Name              ; ffjknand                                        ;
@@ -186,7 +186,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                                             ;       ;
 ; I/O pins                                    ; 4     ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out node                        ; inst6 ;
+; Maximum fan-out node                        ; inst4 ;
 ; Maximum fan-out                             ; 4     ;
 ; Total fan-out                               ; 18    ;
 ; Average fan-out                             ; 1.80  ;
@@ -233,7 +233,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Nov 25 10:47:34 2016
+    Info: Processing started: Thu Dec  1 19:01:03 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off exp11 -c exp11
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file ffjknand.bdf
@@ -247,7 +247,7 @@ Info (21057): Implemented 7 device resources after synthesis - the final resourc
     Info (21061): Implemented 3 logic cells
 Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 341 megabytes
-    Info: Processing ended: Fri Nov 25 10:47:35 2016
+    Info: Processing ended: Thu Dec  1 19:01:04 2016
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

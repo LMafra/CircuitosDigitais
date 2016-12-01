@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for exp11
-Fri Nov 25 10:47:48 2016
+Thu Dec  1 19:01:18 2016
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -16,9 +16,9 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   8. Slow Model Recovery Summary
   9. Slow Model Removal Summary
  10. Slow Model Minimum Pulse Width Summary
- 11. Slow Model Setup: 'LEDR[0]'
- 12. Slow Model Hold: 'LEDR[0]'
- 13. Slow Model Minimum Pulse Width: 'LEDR[0]'
+ 11. Slow Model Setup: 'CLOCK'
+ 12. Slow Model Hold: 'CLOCK'
+ 13. Slow Model Minimum Pulse Width: 'CLOCK'
  14. Clock to Output Times
  15. Minimum Clock to Output Times
  16. Fast Model Setup Summary
@@ -26,9 +26,9 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  18. Fast Model Recovery Summary
  19. Fast Model Removal Summary
  20. Fast Model Minimum Pulse Width Summary
- 21. Fast Model Setup: 'LEDR[0]'
- 22. Fast Model Hold: 'LEDR[0]'
- 23. Fast Model Minimum Pulse Width: 'LEDR[0]'
+ 21. Fast Model Setup: 'CLOCK'
+ 22. Fast Model Hold: 'CLOCK'
+ 23. Fast Model Minimum Pulse Width: 'CLOCK'
  24. Clock to Output Times
  25. Minimum Clock to Output Times
  26. Multicorner Timing Analysis Summary
@@ -86,13 +86,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clocks                                                                                                                                                                              ;
-+------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------+
-; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets     ;
-+------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------+
-; LEDR[0]    ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { LEDR[0] } ;
-+------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                            ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets   ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; CLOCK      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLOCK } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
 
 
 +-----------------------------------------------------------------------------------------------------------+
@@ -100,27 +100,27 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------+-----------------+------------+---------------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
 +------------+-----------------+------------+---------------------------------------------------------------+
-; 963.39 MHz ; 450.05 MHz      ; LEDR[0]    ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 935.45 MHz ; 420.17 MHz      ; CLOCK      ; limit due to minimum period restriction (max I/O toggle rate) ;
 +------------+-----------------+------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
-+----------------------------------+
-; Slow Model Setup Summary         ;
-+---------+--------+---------------+
-; Clock   ; Slack  ; End Point TNS ;
-+---------+--------+---------------+
-; LEDR[0] ; -0.038 ; -0.111        ;
-+---------+--------+---------------+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; CLOCK ; -0.069 ; -0.140        ;
++-------+--------+---------------+
 
 
-+---------------------------------+
-; Slow Model Hold Summary         ;
-+---------+-------+---------------+
-; Clock   ; Slack ; End Point TNS ;
-+---------+-------+---------------+
-; LEDR[0] ; 0.391 ; 0.000         ;
-+---------+-------+---------------+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; CLOCK ; 0.391 ; 0.000         ;
++-------+-------+---------------+
 
 
 -------------------------------
@@ -137,68 +137,72 @@ No paths to report.
 
 +----------------------------------------+
 ; Slow Model Minimum Pulse Width Summary ;
-+---------+--------+---------------------+
-; Clock   ; Slack  ; End Point TNS       ;
-+---------+--------+---------------------+
-; LEDR[0] ; -1.222 ; -4.222              ;
-+---------+--------+---------------------+
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; CLOCK ; -1.380 ; -4.380                ;
++-------+--------+-----------------------+
 
 
 +----------------------------------------------------------------------------------------------------+
-; Slow Model Setup: 'LEDR[0]'                                                                        ;
+; Slow Model Setup: 'CLOCK'                                                                          ;
 +--------+-----------+---------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node ; To Node ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+-----------+---------+--------------+-------------+--------------+------------+------------+
-; -0.038 ; inst4     ; inst6   ; LEDR[0]      ; LEDR[0]     ; 1.000        ; 0.000      ; 1.074      ;
-; -0.037 ; inst6     ; inst4   ; LEDR[0]      ; LEDR[0]     ; 1.000        ; 0.000      ; 1.073      ;
-; -0.036 ; inst4     ; inst5   ; LEDR[0]      ; LEDR[0]     ; 1.000        ; 0.000      ; 1.072      ;
-; 0.236  ; inst6     ; inst5   ; LEDR[0]      ; LEDR[0]     ; 1.000        ; 0.000      ; 0.800      ;
-; 0.237  ; inst5     ; inst6   ; LEDR[0]      ; LEDR[0]     ; 1.000        ; 0.000      ; 0.799      ;
-; 0.240  ; inst5     ; inst4   ; LEDR[0]      ; LEDR[0]     ; 1.000        ; 0.000      ; 0.796      ;
-; 0.379  ; inst6     ; inst6   ; LEDR[0]      ; LEDR[0]     ; 1.000        ; 0.000      ; 0.657      ;
-; 0.379  ; inst4     ; inst4   ; LEDR[0]      ; LEDR[0]     ; 1.000        ; 0.000      ; 0.657      ;
-; 0.379  ; inst5     ; inst5   ; LEDR[0]      ; LEDR[0]     ; 1.000        ; 0.000      ; 0.657      ;
+; -0.069 ; inst4     ; inst6   ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.105      ;
+; -0.036 ; inst6     ; inst4   ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.072      ;
+; -0.035 ; inst6     ; inst5   ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.071      ;
+; 0.238  ; inst4     ; inst5   ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.798      ;
+; 0.239  ; inst5     ; inst4   ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.797      ;
+; 0.240  ; inst5     ; inst6   ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.796      ;
+; 0.379  ; inst6     ; inst6   ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.657      ;
+; 0.379  ; inst4     ; inst4   ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.657      ;
+; 0.379  ; inst5     ; inst5   ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.657      ;
 +--------+-----------+---------+--------------+-------------+--------------+------------+------------+
 
 
 +---------------------------------------------------------------------------------------------------+
-; Slow Model Hold: 'LEDR[0]'                                                                        ;
+; Slow Model Hold: 'CLOCK'                                                                          ;
 +-------+-----------+---------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node ; To Node ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+-----------+---------+--------------+-------------+--------------+------------+------------+
-; 0.391 ; inst4     ; inst4   ; LEDR[0]      ; LEDR[0]     ; 0.000        ; 0.000      ; 0.657      ;
-; 0.391 ; inst5     ; inst5   ; LEDR[0]      ; LEDR[0]     ; 0.000        ; 0.000      ; 0.657      ;
-; 0.391 ; inst6     ; inst6   ; LEDR[0]      ; LEDR[0]     ; 0.000        ; 0.000      ; 0.657      ;
-; 0.530 ; inst5     ; inst4   ; LEDR[0]      ; LEDR[0]     ; 0.000        ; 0.000      ; 0.796      ;
-; 0.533 ; inst5     ; inst6   ; LEDR[0]      ; LEDR[0]     ; 0.000        ; 0.000      ; 0.799      ;
-; 0.534 ; inst6     ; inst5   ; LEDR[0]      ; LEDR[0]     ; 0.000        ; 0.000      ; 0.800      ;
-; 0.806 ; inst4     ; inst5   ; LEDR[0]      ; LEDR[0]     ; 0.000        ; 0.000      ; 1.072      ;
-; 0.807 ; inst6     ; inst4   ; LEDR[0]      ; LEDR[0]     ; 0.000        ; 0.000      ; 1.073      ;
-; 0.808 ; inst4     ; inst6   ; LEDR[0]      ; LEDR[0]     ; 0.000        ; 0.000      ; 1.074      ;
+; 0.391 ; inst6     ; inst6   ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; inst5     ; inst5   ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; inst4     ; inst4   ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.530 ; inst5     ; inst6   ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.796      ;
+; 0.531 ; inst5     ; inst4   ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.797      ;
+; 0.532 ; inst4     ; inst5   ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.798      ;
+; 0.805 ; inst6     ; inst5   ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.071      ;
+; 0.806 ; inst6     ; inst4   ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.072      ;
+; 0.839 ; inst4     ; inst6   ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.105      ;
 +-------+-----------+---------+--------------+-------------+--------------+------------+------------+
 
 
-+----------------------------------------------------------------------------------------------------+
-; Slow Model Minimum Pulse Width: 'LEDR[0]'                                                          ;
-+--------+--------------+----------------+------------------+---------+------------+-----------------+
-; Slack  ; Actual Width ; Required Width ; Type             ; Clock   ; Clock Edge ; Target          ;
-+--------+--------------+----------------+------------------+---------+------------+-----------------+
-; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; LEDR[0] ; Rise       ; LEDR[0]         ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; LEDR[0] ; Rise       ; inst4           ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; LEDR[0] ; Rise       ; inst4           ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; LEDR[0] ; Rise       ; inst5           ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; LEDR[0] ; Rise       ; inst5           ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; LEDR[0] ; Rise       ; inst6           ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; LEDR[0] ; Rise       ; inst6           ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; LEDR[0] ; Rise       ; LEDR[0]|combout ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; LEDR[0] ; Rise       ; LEDR[0]|combout ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; LEDR[0] ; Rise       ; inst4|clk       ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; LEDR[0] ; Rise       ; inst4|clk       ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; LEDR[0] ; Rise       ; inst5|clk       ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; LEDR[0] ; Rise       ; inst5|clk       ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; LEDR[0] ; Rise       ; inst6|clk       ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; LEDR[0] ; Rise       ; inst6|clk       ;
-+--------+--------------+----------------+------------------+---------+------------+-----------------+
++---------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'CLOCK'                                                                 ;
++--------+--------------+----------------+------------------+-------+------------+------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                 ;
++--------+--------------+----------------+------------------+-------+------------+------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLOCK ; Rise       ; CLOCK                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; inst4                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst4                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; inst5                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst5                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; inst6                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst6                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; CLOCK|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; CLOCK|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; CLOCK~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; CLOCK~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; CLOCK~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; CLOCK~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst4|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst4|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst5|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst5|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst6|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst6|clk              ;
++--------+--------------+----------------+------------------+-------+------------+------------------------+
 
 
 +-----------------------------------------------------------------------+
@@ -206,10 +210,9 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; LEDG[*]   ; LEDR[0]    ; 6.259 ; 6.259 ; Rise       ; LEDR[0]         ;
-;  LEDG[0]  ; LEDR[0]    ; 6.258 ; 6.258 ; Rise       ; LEDR[0]         ;
-;  LEDG[1]  ; LEDR[0]    ; 6.259 ; 6.259 ; Rise       ; LEDR[0]         ;
-;  LEDG[2]  ; LEDR[0]    ; 6.238 ; 6.238 ; Rise       ; LEDR[0]         ;
+; Q0        ; CLOCK      ; 6.103 ; 6.103 ; Rise       ; CLOCK           ;
+; Q1        ; CLOCK      ; 6.104 ; 6.104 ; Rise       ; CLOCK           ;
+; Q2        ; CLOCK      ; 6.073 ; 6.073 ; Rise       ; CLOCK           ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -218,29 +221,28 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; LEDG[*]   ; LEDR[0]    ; 6.238 ; 6.238 ; Rise       ; LEDR[0]         ;
-;  LEDG[0]  ; LEDR[0]    ; 6.258 ; 6.258 ; Rise       ; LEDR[0]         ;
-;  LEDG[1]  ; LEDR[0]    ; 6.259 ; 6.259 ; Rise       ; LEDR[0]         ;
-;  LEDG[2]  ; LEDR[0]    ; 6.238 ; 6.238 ; Rise       ; LEDR[0]         ;
+; Q0        ; CLOCK      ; 6.103 ; 6.103 ; Rise       ; CLOCK           ;
+; Q1        ; CLOCK      ; 6.104 ; 6.104 ; Rise       ; CLOCK           ;
+; Q2        ; CLOCK      ; 6.073 ; 6.073 ; Rise       ; CLOCK           ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
-+---------------------------------+
-; Fast Model Setup Summary        ;
-+---------+-------+---------------+
-; Clock   ; Slack ; End Point TNS ;
-+---------+-------+---------------+
-; LEDR[0] ; 0.517 ; 0.000         ;
-+---------+-------+---------------+
++-------------------------------+
+; Fast Model Setup Summary      ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; CLOCK ; 0.508 ; 0.000         ;
++-------+-------+---------------+
 
 
-+---------------------------------+
-; Fast Model Hold Summary         ;
-+---------+-------+---------------+
-; Clock   ; Slack ; End Point TNS ;
-+---------+-------+---------------+
-; LEDR[0] ; 0.215 ; 0.000         ;
-+---------+-------+---------------+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; CLOCK ; 0.215 ; 0.000         ;
++-------+-------+---------------+
 
 
 -------------------------------
@@ -257,68 +259,72 @@ No paths to report.
 
 +----------------------------------------+
 ; Fast Model Minimum Pulse Width Summary ;
-+---------+--------+---------------------+
-; Clock   ; Slack  ; End Point TNS       ;
-+---------+--------+---------------------+
-; LEDR[0] ; -1.222 ; -4.222              ;
-+---------+--------+---------------------+
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; CLOCK ; -1.380 ; -4.380                ;
++-------+--------+-----------------------+
 
 
 +---------------------------------------------------------------------------------------------------+
-; Fast Model Setup: 'LEDR[0]'                                                                       ;
+; Fast Model Setup: 'CLOCK'                                                                         ;
 +-------+-----------+---------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node ; To Node ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+-----------+---------+--------------+-------------+--------------+------------+------------+
-; 0.517 ; inst6     ; inst4   ; LEDR[0]      ; LEDR[0]     ; 1.000        ; 0.000      ; 0.515      ;
-; 0.518 ; inst4     ; inst6   ; LEDR[0]      ; LEDR[0]     ; 1.000        ; 0.000      ; 0.514      ;
-; 0.520 ; inst4     ; inst5   ; LEDR[0]      ; LEDR[0]     ; 1.000        ; 0.000      ; 0.512      ;
-; 0.633 ; inst6     ; inst5   ; LEDR[0]      ; LEDR[0]     ; 1.000        ; 0.000      ; 0.399      ;
-; 0.634 ; inst5     ; inst6   ; LEDR[0]      ; LEDR[0]     ; 1.000        ; 0.000      ; 0.398      ;
-; 0.637 ; inst5     ; inst4   ; LEDR[0]      ; LEDR[0]     ; 1.000        ; 0.000      ; 0.395      ;
-; 0.665 ; inst4     ; inst4   ; LEDR[0]      ; LEDR[0]     ; 1.000        ; 0.000      ; 0.367      ;
-; 0.665 ; inst6     ; inst6   ; LEDR[0]      ; LEDR[0]     ; 1.000        ; 0.000      ; 0.367      ;
-; 0.665 ; inst5     ; inst5   ; LEDR[0]      ; LEDR[0]     ; 1.000        ; 0.000      ; 0.367      ;
+; 0.508 ; inst4     ; inst6   ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.524      ;
+; 0.519 ; inst6     ; inst4   ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.513      ;
+; 0.520 ; inst6     ; inst5   ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.512      ;
+; 0.636 ; inst5     ; inst4   ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.396      ;
+; 0.636 ; inst4     ; inst5   ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.396      ;
+; 0.637 ; inst5     ; inst6   ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.395      ;
+; 0.665 ; inst6     ; inst6   ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; inst4     ; inst4   ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; inst5     ; inst5   ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.367      ;
 +-------+-----------+---------+--------------+-------------+--------------+------------+------------+
 
 
 +---------------------------------------------------------------------------------------------------+
-; Fast Model Hold: 'LEDR[0]'                                                                        ;
+; Fast Model Hold: 'CLOCK'                                                                          ;
 +-------+-----------+---------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node ; To Node ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+-----------+---------+--------------+-------------+--------------+------------+------------+
-; 0.215 ; inst4     ; inst4   ; LEDR[0]      ; LEDR[0]     ; 0.000        ; 0.000      ; 0.367      ;
-; 0.215 ; inst5     ; inst5   ; LEDR[0]      ; LEDR[0]     ; 0.000        ; 0.000      ; 0.367      ;
-; 0.215 ; inst6     ; inst6   ; LEDR[0]      ; LEDR[0]     ; 0.000        ; 0.000      ; 0.367      ;
-; 0.243 ; inst5     ; inst4   ; LEDR[0]      ; LEDR[0]     ; 0.000        ; 0.000      ; 0.395      ;
-; 0.246 ; inst5     ; inst6   ; LEDR[0]      ; LEDR[0]     ; 0.000        ; 0.000      ; 0.398      ;
-; 0.247 ; inst6     ; inst5   ; LEDR[0]      ; LEDR[0]     ; 0.000        ; 0.000      ; 0.399      ;
-; 0.360 ; inst4     ; inst5   ; LEDR[0]      ; LEDR[0]     ; 0.000        ; 0.000      ; 0.512      ;
-; 0.362 ; inst4     ; inst6   ; LEDR[0]      ; LEDR[0]     ; 0.000        ; 0.000      ; 0.514      ;
-; 0.363 ; inst6     ; inst4   ; LEDR[0]      ; LEDR[0]     ; 0.000        ; 0.000      ; 0.515      ;
+; 0.215 ; inst6     ; inst6   ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; inst5     ; inst5   ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; inst4     ; inst4   ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.243 ; inst5     ; inst6   ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.395      ;
+; 0.244 ; inst4     ; inst5   ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.396      ;
+; 0.244 ; inst5     ; inst4   ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.396      ;
+; 0.360 ; inst6     ; inst5   ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.512      ;
+; 0.361 ; inst6     ; inst4   ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.513      ;
+; 0.372 ; inst4     ; inst6   ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.524      ;
 +-------+-----------+---------+--------------+-------------+--------------+------------+------------+
 
 
-+----------------------------------------------------------------------------------------------------+
-; Fast Model Minimum Pulse Width: 'LEDR[0]'                                                          ;
-+--------+--------------+----------------+------------------+---------+------------+-----------------+
-; Slack  ; Actual Width ; Required Width ; Type             ; Clock   ; Clock Edge ; Target          ;
-+--------+--------------+----------------+------------------+---------+------------+-----------------+
-; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; LEDR[0] ; Rise       ; LEDR[0]         ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; LEDR[0] ; Rise       ; inst4           ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; LEDR[0] ; Rise       ; inst4           ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; LEDR[0] ; Rise       ; inst5           ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; LEDR[0] ; Rise       ; inst5           ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; LEDR[0] ; Rise       ; inst6           ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; LEDR[0] ; Rise       ; inst6           ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; LEDR[0] ; Rise       ; LEDR[0]|combout ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; LEDR[0] ; Rise       ; LEDR[0]|combout ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; LEDR[0] ; Rise       ; inst4|clk       ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; LEDR[0] ; Rise       ; inst4|clk       ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; LEDR[0] ; Rise       ; inst5|clk       ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; LEDR[0] ; Rise       ; inst5|clk       ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; LEDR[0] ; Rise       ; inst6|clk       ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; LEDR[0] ; Rise       ; inst6|clk       ;
-+--------+--------------+----------------+------------------+---------+------------+-----------------+
++---------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'CLOCK'                                                                 ;
++--------+--------------+----------------+------------------+-------+------------+------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                 ;
++--------+--------------+----------------+------------------+-------+------------+------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLOCK ; Rise       ; CLOCK                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; inst4                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst4                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; inst5                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst5                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; inst6                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst6                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; CLOCK|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; CLOCK|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; CLOCK~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; CLOCK~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; CLOCK~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; CLOCK~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst4|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst4|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst5|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst5|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst6|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst6|clk              ;
++--------+--------------+----------------+------------------+-------+------------+------------------------+
 
 
 +-----------------------------------------------------------------------+
@@ -326,10 +332,9 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; LEDG[*]   ; LEDR[0]    ; 3.386 ; 3.386 ; Rise       ; LEDR[0]         ;
-;  LEDG[0]  ; LEDR[0]    ; 3.384 ; 3.384 ; Rise       ; LEDR[0]         ;
-;  LEDG[1]  ; LEDR[0]    ; 3.386 ; 3.386 ; Rise       ; LEDR[0]         ;
-;  LEDG[2]  ; LEDR[0]    ; 3.366 ; 3.366 ; Rise       ; LEDR[0]         ;
+; Q0        ; CLOCK      ; 3.488 ; 3.488 ; Rise       ; CLOCK           ;
+; Q1        ; CLOCK      ; 3.488 ; 3.488 ; Rise       ; CLOCK           ;
+; Q2        ; CLOCK      ; 3.458 ; 3.458 ; Rise       ; CLOCK           ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -338,10 +343,9 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; LEDG[*]   ; LEDR[0]    ; 3.366 ; 3.366 ; Rise       ; LEDR[0]         ;
-;  LEDG[0]  ; LEDR[0]    ; 3.384 ; 3.384 ; Rise       ; LEDR[0]         ;
-;  LEDG[1]  ; LEDR[0]    ; 3.386 ; 3.386 ; Rise       ; LEDR[0]         ;
-;  LEDG[2]  ; LEDR[0]    ; 3.366 ; 3.366 ; Rise       ; LEDR[0]         ;
+; Q0        ; CLOCK      ; 3.488 ; 3.488 ; Rise       ; CLOCK           ;
+; Q1        ; CLOCK      ; 3.488 ; 3.488 ; Rise       ; CLOCK           ;
+; Q2        ; CLOCK      ; 3.458 ; 3.458 ; Rise       ; CLOCK           ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -350,10 +354,10 @@ No paths to report.
 +------------------+--------+-------+----------+---------+---------------------+
 ; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+--------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -0.038 ; 0.215 ; N/A      ; N/A     ; -1.222              ;
-;  LEDR[0]         ; -0.038 ; 0.215 ; N/A      ; N/A     ; -1.222              ;
-; Design-wide TNS  ; -0.111 ; 0.0   ; 0.0      ; 0.0     ; -4.222              ;
-;  LEDR[0]         ; -0.111 ; 0.000 ; N/A      ; N/A     ; -4.222              ;
+; Worst-case Slack ; -0.069 ; 0.215 ; N/A      ; N/A     ; -1.380              ;
+;  CLOCK           ; -0.069 ; 0.215 ; N/A      ; N/A     ; -1.380              ;
+; Design-wide TNS  ; -0.14  ; 0.0   ; 0.0      ; 0.0     ; -4.38               ;
+;  CLOCK           ; -0.140 ; 0.000 ; N/A      ; N/A     ; -4.380              ;
 +------------------+--------+-------+----------+---------+---------------------+
 
 
@@ -362,10 +366,9 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; LEDG[*]   ; LEDR[0]    ; 6.259 ; 6.259 ; Rise       ; LEDR[0]         ;
-;  LEDG[0]  ; LEDR[0]    ; 6.258 ; 6.258 ; Rise       ; LEDR[0]         ;
-;  LEDG[1]  ; LEDR[0]    ; 6.259 ; 6.259 ; Rise       ; LEDR[0]         ;
-;  LEDG[2]  ; LEDR[0]    ; 6.238 ; 6.238 ; Rise       ; LEDR[0]         ;
+; Q0        ; CLOCK      ; 6.103 ; 6.103 ; Rise       ; CLOCK           ;
+; Q1        ; CLOCK      ; 6.104 ; 6.104 ; Rise       ; CLOCK           ;
+; Q2        ; CLOCK      ; 6.073 ; 6.073 ; Rise       ; CLOCK           ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -374,10 +377,9 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; LEDG[*]   ; LEDR[0]    ; 3.366 ; 3.366 ; Rise       ; LEDR[0]         ;
-;  LEDG[0]  ; LEDR[0]    ; 3.384 ; 3.384 ; Rise       ; LEDR[0]         ;
-;  LEDG[1]  ; LEDR[0]    ; 3.386 ; 3.386 ; Rise       ; LEDR[0]         ;
-;  LEDG[2]  ; LEDR[0]    ; 3.366 ; 3.366 ; Rise       ; LEDR[0]         ;
+; Q0        ; CLOCK      ; 3.488 ; 3.488 ; Rise       ; CLOCK           ;
+; Q1        ; CLOCK      ; 3.488 ; 3.488 ; Rise       ; CLOCK           ;
+; Q2        ; CLOCK      ; 3.458 ; 3.458 ; Rise       ; CLOCK           ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -386,7 +388,7 @@ No paths to report.
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; LEDR[0]    ; LEDR[0]  ; 9        ; 0        ; 0        ; 0        ;
+; CLOCK      ; CLOCK    ; 9        ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -396,7 +398,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; LEDR[0]    ; LEDR[0]  ; 9        ; 0        ; 0        ; 0        ;
+; CLOCK      ; CLOCK    ; 9        ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -433,7 +435,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 32-bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Nov 25 10:47:47 2016
+    Info: Processing started: Thu Dec  1 19:01:18 2016
 Info: Command: quartus_sta exp11 -c exp11
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -442,48 +444,48 @@ Info (21077): High junction temperature is 85 degrees C
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'exp11.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
-    Info (332105): create_clock -period 1.000 -name LEDR[0] LEDR[0]
+    Info (332105): create_clock -period 1.000 -name CLOCK CLOCK
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow Model
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -0.038
+Info (332146): Worst-case setup slack is -0.069
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -0.038        -0.111 LEDR[0] 
+    Info (332119):    -0.069        -0.140 CLOCK 
 Info (332146): Worst-case hold slack is 0.391
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):     0.391         0.000 LEDR[0] 
+    Info (332119):     0.391         0.000 CLOCK 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -1.222
+Info (332146): Worst-case minimum pulse width slack is -1.380
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -1.222        -4.222 LEDR[0] 
+    Info (332119):    -1.380        -4.380 CLOCK 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info: Analyzing Fast Model
-Info (332146): Worst-case setup slack is 0.517
+Info (332146): Worst-case setup slack is 0.508
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):     0.517         0.000 LEDR[0] 
+    Info (332119):     0.508         0.000 CLOCK 
 Info (332146): Worst-case hold slack is 0.215
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):     0.215         0.000 LEDR[0] 
+    Info (332119):     0.215         0.000 CLOCK 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case minimum pulse width slack is -1.222
+Info (332146): Worst-case minimum pulse width slack is -1.380
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -1.222        -4.222 LEDR[0] 
+    Info (332119):    -1.380        -4.380 CLOCK 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 32-bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 301 megabytes
-    Info: Processing ended: Fri Nov 25 10:47:48 2016
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Thu Dec  1 19:01:18 2016
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 
